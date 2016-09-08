@@ -48,7 +48,8 @@ a:hover {
 }
 
 #calendar {
-	
+	padding-top: 20px;
+	width: 840px;
 }
 
 #view-item {

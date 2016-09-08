@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*** TAGS ***/
+/* Table w/o 'outside border' modified from http://stackoverflow.com/questions/1257430/css-border-only-inside-the-table */
+table {
+	border-collapse: collapse;
+}
+
+table td {
+	border: 1px solid #C7C8CA;
+	width: 210px;
+	height: 210px;
+	font-size: 36pt;
+	text-align: center;
+	vertical-align: middle;
+}
+
+table tr:first-child td {
+	border-top: 0;
+}
+
+table tr:last-child td {
+	border-bottom: 0;
+}
+
+table tr td:first-child {
+	border-left: 0;
+}
+
+table tr td:last-child {
+	border-right: 0;
+}
