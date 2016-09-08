@@ -23,18 +23,12 @@ a:hover {
 #container {
 	margin: 0px auto;
 	padding: 0px;
-	width: 1080px;
+	width: 840px;
 }
 
 #content {
 	padding-top: 50px;
-	width: 1080px;
-}
-
-#sidebar {
-	padding-top: 290px;
-	width: 120px;
-	float: left;
+	width: 840px;
 }
 
 #main-content {
@@ -93,12 +87,6 @@ a:hover {
 }
 
 /*** CLASSES ***/
-.sidebar-item {
-	width: 120px;
-	line-height: 100px;
-	text-align: center;
-	vertical-align: middle;
-}
 
 .current {
 	color: #BE1E2D;
