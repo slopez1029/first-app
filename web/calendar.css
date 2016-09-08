@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 21pt;
+	background-color: #FFF;
+}
+
+#container {
+	margin: 0px auto;
+	padding: 0px;
+	width: 1080px;
+}
+
+#content {
+	margin-top: 120px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	width: 1080px;
+	background-color: #F00;
+}
+
+#sidebar {
+	width: 120px;
+	float: left;
+	background-color: #0F0;
+}
+
+#main-content {
+	width: 840px;
+	float: left;
+}
+
+<!-- Clearfix solution from http://stackoverflow.com/questions/8554043/what-is-clearfix -->
+.clearfix:after {
+	content: " "; /* Older browser do not support empty content */
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}
