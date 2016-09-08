@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*** IDS ***/
+#container {
+	width: 1080px;
+}
+
+#content {
+	width: 1080px;
+}
+
+#sidebar {
+	padding-top: 290px;
+	width: 120px;
+	float: left;
+}
+
+/*** CLASSES ***/
+.sidebar-item {
+	width: 120px;
+	line-height: 100px;
+	text-align: center;
+	vertical-align: middle;
+}
