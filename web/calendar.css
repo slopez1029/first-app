@@ -21,7 +21,7 @@ a:hover {
 
 a:active {
 	color: #FF2C46;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 /*** IDS ***/
