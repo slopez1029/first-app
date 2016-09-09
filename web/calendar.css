@@ -15,8 +15,13 @@ a {
 }
 
 a:hover {
-	color: #F00;
+	color: #DD263D;
 	text-decoration: underline;
+}
+
+a:active {
+	color: #FF2C46;
+	text-decoration: none;
 }
 
 /*** IDS ***/
