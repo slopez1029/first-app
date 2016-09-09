@@ -2,29 +2,26 @@
 /* CSS Document */
 
 /*** TAGS ***/
-table {
-	border-collapse: collapse;
-}
 
-table th {
-	border-bottom: 1px solid black;
-	width: 120px;
+table td {
+	width: 200px;
 	height: 40px;
 	text-align: center;
 	vertical-align: middle;
 }
 
-table td {
-	width: 120px;
-	height: 100px;
-	font-family: "MS Serif", "New York", serif;
-	font-size: 36pt;
-	color: #C7C8CA;
-	text-align: center;
-	vertical-align: middle;
+li {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 20px;
+	
 }
 
 /*** IDS ***/
 #calendar {
-	padding-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+	width: 400px;
+	font-size: 12pt;
 }
