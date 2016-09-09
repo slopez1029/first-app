@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*** TAGS ***/
+table {
+	border-collapse: collapse;
+}
+
+table th {
+	border: 1px solid black;
+	width: 120px;
+	height: 40px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+table td {
+	border: 1px solid black;
+	width: 120px;
+	height: 100px;
+	font-family: "MS Serif", "New York", serif;
+	font-size: 36pt;
+	color: #C7C8CA;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/*** IDS ***/
+#container {
+	width: 1080px;
+}
+
+#content {
+	width: 1080px;
+}
+
+#sidebar {
+	padding-top: 214px;
+	width: 120px;
+	float: left;
+}
+
+/*** CLASSES ***/
+.sidebar-item {
+	width: 120px;
+	line-height: 103px;
+	text-align: center;
+	vertical-align: middle;
+	clear: both;
+}
