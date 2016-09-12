@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-calendar-year',
-  templateUrl: './calendar-year.component.html',
-  styleUrls: ['./calendar-year.component.css']
+  templateUrl: './calendar-year-view.component.html',
+  styleUrls: ['./calendar-year-view.component.css']
 })
-export class CalendarYearComponent implements OnInit {
+export class CalendarYearViewComponent implements OnInit {
 
   constructor() { }
 

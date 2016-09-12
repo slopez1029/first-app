@@ -7,7 +7,7 @@ import {Router, ActivatedRoute} from "@angular/router";
   templateUrl: './calendar-month-view.component.html',
   styleUrls: ['./calendar-month-view.component.css']
 })
-export class CalendarComponent implements OnInit, OnDestroy {
+export class CalendarMonthViewComponent implements OnInit, OnDestroy {
 
   private subscription:Subscription;
 

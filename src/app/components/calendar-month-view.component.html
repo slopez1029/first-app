@@ -23,31 +23,31 @@
     </tr>
     <tbody>
     <tr>
-      <th scope="row" class="cal-week-heading">Week One</th>
+      <th scope="row" class="cal-week-heading">Week 1</th>
       <td *ngFor="let prevDay of prevMonthDays" class="cal-day-outside-month">{{prevDay}}</td>
       <td *ngFor="let day of weeks[0]">{{day}}</td>
     </tr>
     <tr>
-      <th scope="row" class="cal-week-heading">Week Two</th>
-      <td *ngFor="let day of weeks[1]; let i = index">{{day}}</td>
+      <th scope="row" class="cal-week-heading">Week 2</th>
+      <td *ngFor="let day of weeks[1]">{{day}}</td>
     </tr>
     <tr>
-      <th scope="row" class="cal-week-heading">Week Three</th>
+      <th scope="row" class="cal-week-heading">Week 3</th>
       <td *ngFor="let day of weeks[2]">{{day}}</td>
     </tr>
     <tr>
-      <th scope="row" class="cal-week-heading">Week Four</th>
+      <th scope="row" class="cal-week-heading">Week 4</th>
       <td *ngFor="let day of weeks[3]">{{day}}</td>
     </tr>
     <tr *ngIf="fifthWeekExists">
-      <th scope="row" class="cal-week-heading">Week Five</th>
+      <th scope="row" class="cal-week-heading">Week 5</th>
       <td *ngFor="let day of weeks[4]">{{day}}</td>
       <template [ngIf]="!sixthWeekExists">
         <td *ngFor="let nextDay of nextMonthDays" class="cal-day-outside-month">{{nextDay}}</td>
       </template>
     </tr>
     <tr *ngIf="sixthWeekExists">
-      <th scope="row" class="cal-week-heading">Week Six</th>
+      <th scope="row" class="cal-week-heading">Week 6</th>
       <td *ngFor="let day of weeks[5]">{{day}}</td>
       <td *ngFor="let nextDay of nextMonthDays" class="cal-day-outside-month">{{nextDay}}</td>
     </tr>

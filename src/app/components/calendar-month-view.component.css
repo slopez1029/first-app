@@ -1,14 +1,19 @@
 .left-icon {
-  margin-right: 20%;
+  margin-right: 15%;
 }
 
 .right-icon {
-  margin-left: 20%;
+  margin-left: 15%;
 }
 
 .dead-icon {
   color: #C7C8CA !important;
 }
+
+.cal-day-heading {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
 td:hover {
   background-color: lightgray;
   cursor: pointer;
@@ -68,6 +73,21 @@ a:hover {
     text-align: center;
     color: #BE1E2D;
     font-family: "MS Serif", "New York", serif;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  td {
+    text-align: center;
+  }
+
+  .cal-week-heading {
+    color: #BE1E2D;
+    font-family: "MS Serif", "New York", serif;
+  }
+
+  .cal-day-heading {
+    text-align: center;
   }
 }
 
