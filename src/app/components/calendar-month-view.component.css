@@ -1,0 +1,75 @@
+.left-icon {
+  margin-right: 20%;
+}
+
+.right-icon {
+  margin-left: 20%;
+}
+
+.dead-icon {
+  color: #C7C8CA !important;
+}
+td:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+table td {
+  font-size: 2em;
+  color: #BE1E2D;
+  font-family: "MS Serif", "New York", serif;
+}
+
+table { /*https://www.w3.org/Style/Examples/007/center.en.html*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border-top: 0px !important;
+}
+
+a {
+  color: #333333;
+}
+
+#month-title-heading {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 5em;
+}
+
+.cal-day-outside-month {
+  color: #C7C8CA !important;
+}
+
+a:hover {
+  color: gray;
+}
+
+.table.no-top-border tr td, .table.no-top-border tr th { /*https://codepen.io/netsi1964/pen/ogVQqG*/
+  border-top-width: 0;
+}
+
+@media screen and (min-width: 1000px) {
+  /*http://www.w3schools.com/cssref/tryit.asp?filename=trycss3_media_example1*/
+  td {
+    height: 100px;
+  }
+
+  .cal-day-heading {
+    height: 70px;
+    text-align: center;
+    padding-top: 25px;
+  }
+
+  .cal-week-heading {
+    padding-top: 40px;
+    text-align: center;
+    color: #BE1E2D;
+    font-family: "MS Serif", "New York", serif;
+  }
+}
+
+
+

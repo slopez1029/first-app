@@ -1,0 +1,55 @@
+<div class="table-responsive">
+  <table class="table no-top-border table-bordered">
+    <tr>
+      <th colspan="8" id="month-title-heading">
+        <h1>
+          <a *ngIf="previousMonthExists" [routerLink]="['/month/' + getPreviousMonth()]"><span class="glyphicon glyphicon-chevron-left left-icon"></span></a>
+          <span *ngIf="!previousMonthExists" class="glyphicon glyphicon-chevron-left left-icon dead-icon" ></span>
+          {{month}}
+          <a *ngIf="nextMonthExists" [routerLink]="['/month/' + getNextMonth()]"><span class="glyphicon glyphicon-chevron-right right-icon"></span></a>
+          <span *ngIf="!nextMonthExists" class="glyphicon glyphicon-chevron-right right-icon dead-icon" ></span>
+        </h1>
+      </th>
+    </tr>
+    <tr>
+      <th class="cal-day-heading"></th>
+      <th class="cal-day-heading">Su</th>
+      <th class="cal-day-heading">M</th>
+      <th class="cal-day-heading">Tu</th>
+      <th class="cal-day-heading">W</th>
+      <th class="cal-day-heading">Th</th>
+      <th class="cal-day-heading">F</th>
+      <th class="cal-day-heading">Sa</th>
+    </tr>
+    <tbody>
+    <tr>
+      <th scope="row" class="cal-week-heading">Week One</th>
+      <td *ngFor="let prevDay of prevMonthDays" class="cal-day-outside-month">{{prevDay}}</td>
+      <td *ngFor="let day of weeks[0]">{{day}}</td>
+    </tr>
+    <tr>
+      <th scope="row" class="cal-week-heading">Week Two</th>
+      <td *ngFor="let day of weeks[1]; let i = index">{{day}}</td>
+    </tr>
+    <tr>
+      <th scope="row" class="cal-week-heading">Week Three</th>
+      <td *ngFor="let day of weeks[2]">{{day}}</td>
+    </tr>
+    <tr>
+      <th scope="row" class="cal-week-heading">Week Four</th>
+      <td *ngFor="let day of weeks[3]">{{day}}</td>
+    </tr>
+    <tr *ngIf="fifthWeekExists">
+      <th scope="row" class="cal-week-heading">Week Five</th>
+      <td *ngFor="let day of weeks[4]">{{day}}</td>
+      <template [ngIf]="!sixthWeekExists">
+        <td *ngFor="let nextDay of nextMonthDays" class="cal-day-outside-month">{{nextDay}}</td>
+      </template>
+    </tr>
+    <tr *ngIf="sixthWeekExists">
+      <th scope="row" class="cal-week-heading">Week Six</th>
+      <td *ngFor="let day of weeks[5]">{{day}}</td>
+      <td *ngFor="let nextDay of nextMonthDays" class="cal-day-outside-month">{{nextDay}}</td>
+    </tr>
+  </table>
+</div>
