@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FirstApp
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.11-webpack.8.
@@ -29,3 +30,7 @@ Run `ng github-pages:deploy` to deploy to Github Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# EECS448_Calendar
+A web based calendar / planner for EECS448 group project 1.
+>>>>>>> 71ad908f91d6a27f6ee0b949b1fc2209c73e15be
