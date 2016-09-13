@@ -3,11 +3,13 @@
     <tr>
       <th colspan="8" id="month-title-heading">
         <h1>
-          <a *ngIf="previousMonthExists" [routerLink]="['/month/' + getPreviousMonth()]"><span class="glyphicon glyphicon-chevron-left left-icon"></span></a>
-          <span *ngIf="!previousMonthExists" class="glyphicon glyphicon-chevron-left left-icon dead-icon" ></span>
+          <a *ngIf="previousMonthExists" [routerLink]="['/month/' + getPreviousMonth()]"><span
+            class="glyphicon glyphicon-chevron-left left-icon"></span></a>
+          <span *ngIf="!previousMonthExists" class="glyphicon glyphicon-chevron-left left-icon dead-icon"></span>
           {{month}}
-          <a *ngIf="nextMonthExists" [routerLink]="['/month/' + getNextMonth()]"><span class="glyphicon glyphicon-chevron-right right-icon"></span></a>
-          <span *ngIf="!nextMonthExists" class="glyphicon glyphicon-chevron-right right-icon dead-icon" ></span>
+          <a *ngIf="nextMonthExists" [routerLink]="['/month/' + getNextMonth()]"><span
+            class="glyphicon glyphicon-chevron-right right-icon"></span></a>
+          <span *ngIf="!nextMonthExists" class="glyphicon glyphicon-chevron-right right-icon dead-icon"></span>
         </h1>
       </th>
     </tr>
