@@ -122,6 +122,14 @@ export class CalendarMonthViewComponent implements OnInit, OnDestroy {
     return [this.monthArr[this.monthArr.indexOf(this.month) - 1]].toString();
   }
 
+  getCurrentMonth() {
+    return this.month;
+  }
+
+  getThisDay(day: number) {
+    return day+'';
+  }
+
   ngOnInit() {
 
   }
