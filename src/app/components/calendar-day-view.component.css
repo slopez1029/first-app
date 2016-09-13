@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*** TAGS ***/
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18pt;
+  color: #000;
+  background-color: #FFF;
+}
+
+a {
+  color: #BE1E2D;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #DD263D;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #FF2C46;
+  text-decoration: underline;
+}
+
+/*** IDS ***/
+#container {
+  margin: 0px auto;
+  padding: 0px;
+  width: 840px;
+}
+
+#content {
+  padding-top: 50px;
+  width: 840px;
+}
+
+#main-content {
+  width: 840px;
+  float: left;
+}
+
+#view-menu {
+  width: 840px;
+  height: 60px;
+}
+
+#selected-menu {
+  padding: 15px;
+  width: 810px;
+  height: 60px;
+}
+
+#calendar {
+  padding-top: 20px;
+  width: 840px;
+}
+
+.view-item {
+  width: 210px;
+  line-height: 60px;
+  text-align: center;
+  vertical-align: middle;
+  float: left;
+}
+
+#prev {
+  width: 75px;
+  line-height: 60px;
+  font-size: 18pt;
+  text-align: center;
+  vertical-align: middle;
+  float: left;
+}
+
+#selected {
+  width: 660px;
+  line-height: 60px;
+  font-size: 36pt;
+  text-align: center;
+  vertical-align: middle;
+  float: left;
+}
+
+#next {
+  width: 75px;
+  line-height: 60px;
+  font-size: 18pt;
+  text-align: center;
+  vertical-align: middle;
+  float:left;
+}
+
+/*** CLASSES ***/
+
+.current {
+  color: #BE1E2D;
+  text-decoration: underline;
+}
+
+.inaccessible {
+  color: #C7C8CA;
+}
+
+/* Clearfix solution from http://stackoverflow.com/questions/8554043/what-is-clearfix */
+.clearfix:after {
+  content: " "; /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+@charset "utf-8";
+/* CSS Document */
+
+/*** TAGS ***/
+
+table td {
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+
+}
+
+/*** IDS ***/
+#calendar {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  width: 400px;
+  font-size: 12pt;
+}
