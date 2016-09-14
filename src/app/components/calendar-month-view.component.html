@@ -1,20 +1,18 @@
 <div class="table-responsive">
   <table class="table no-top-border table-bordered">
     <tr>
-      <th colspan="8" id="month-title-heading">
-        <h1>
-          <a *ngIf="previousMonthExists" [routerLink]="['/month/' + getPreviousMonth()]"><span
-            class="glyphicon glyphicon-chevron-left left-icon"></span></a>
-          <span *ngIf="!previousMonthExists" class="glyphicon glyphicon-chevron-left left-icon dead-icon"></span>
-          {{month}}
-          <a *ngIf="nextMonthExists" [routerLink]="['/month/' + getNextMonth()]"><span
-            class="glyphicon glyphicon-chevron-right right-icon"></span></a>
-          <span *ngIf="!nextMonthExists" class="glyphicon glyphicon-chevron-right right-icon dead-icon"></span>
-        </h1>
+      <th colspan="8">
+        <a *ngIf="previousMonthExists" [routerLink]="['/month/' + getPreviousMonth()]"><span
+          id="left-icon" class="glyphicon glyphicon-chevron-left"></span></a>
+        <span *ngIf="!previousMonthExists" id="left-icon" class="glyphicon glyphicon-chevron-left dead-icon"></span>
+        <div id="month-title-heading"><h1>{{month}}</h1></div>
+        <a *ngIf="nextMonthExists" [routerLink]="['/month/' + getNextMonth()]"><span
+          id="right-icon" class="glyphicon glyphicon-chevron-right right-icon"></span></a>
+        <span *ngIf="!nextMonthExists" id="right-icon" class="glyphicon glyphicon-chevron-right dead-icon"></span>
       </th>
     </tr>
     <tr>
-      <th class="cal-day-heading"></th>
+      <th></th>
       <th class="cal-day-heading">Su</th>
       <th class="cal-day-heading">M</th>
       <th class="cal-day-heading">Tu</th>
@@ -23,7 +21,6 @@
       <th class="cal-day-heading">F</th>
       <th class="cal-day-heading">Sa</th>
     </tr>
-    <tbody>
     <tr>
       <th scope="row" class="cal-week-heading">Week 1</th>
       <td *ngFor="let prevDay of prevMonthDays" class="cal-day-outside-month">{{prevDay}}</td>
