@@ -1,6 +1,8 @@
+/*** Tags ***/
+
 table { /*https://www.w3.org/Style/Examples/007/center.en.html*/
   position: absolute;
-  top: 125px;
+  top: 75px;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, 0%);
@@ -35,9 +37,14 @@ table th {
   border: none;
 }
 
-td:hover {
+td:hover, th.cal-week-heading:hover {
   background-color: lightgray;
   cursor: pointer;
+}
+
+td.cal-day-outside-month:hover {
+  background-color: white;
+  cursor: default;
 }
 
 th.cal-day-heading {
@@ -50,12 +57,20 @@ th.cal-week-heading {
 }
 
 a {
-  color: #333333;
+  color: #BE1E2D;
 }
 
 a:hover {
-  color: gray;
+	color: #DD263D;
+	text-decoration: underline;
 }
+
+a:active {
+	color: #FF2C46;
+	text-decoration: underline;
+}
+
+/*** IDs ***/
 
 #left-icon {
   margin-right: 80px;
@@ -79,6 +94,8 @@ a:hover {
   display: inline;
 }
 
+/*** Classes ***/
+
 .dead-icon {
   color: #C7C8CA !important;
 }
@@ -87,13 +104,11 @@ a:hover {
   color: #C7C8CA !important;
 }
 
-.year-link {
-  align-content: center;
-}
-
 .table.no-top-border tr td, .table.no-top-border tr th { /*https://codepen.io/netsi1964/pen/ogVQqG*/
   border-top-width: 0;
 }
+
+/*** Responsive @media queries ***/
 
 @media screen and (min-width: 1000px) {
   table {
