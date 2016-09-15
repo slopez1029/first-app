@@ -87,6 +87,10 @@ a:hover {
   color: #C7C8CA !important;
 }
 
+.year-link {
+  align-content: center;
+}
+
 .table.no-top-border tr td, .table.no-top-border tr th { /*https://codepen.io/netsi1964/pen/ogVQqG*/
   border-top-width: 0;
 }
