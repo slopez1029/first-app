@@ -93,6 +93,14 @@ a:active {
 }
 
 /*** CLASSES ***/
+.kill {
+  float: right;
+  color: red;
+}
+
+.kill:hover {
+  cursor: pointer;
+}
 
 .current {
   color: #BE1E2D;
@@ -139,3 +147,4 @@ li {
   width: 400px;
   font-size: 12pt;
 }
+
