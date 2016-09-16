@@ -27,32 +27,44 @@
       <th class="cal-day-heading">Sa</th>
     </tr>
     <tr>
-      <th scope="row" class="cal-week-heading">Week 1</th>
+      <th scope="row" class="cal-week-heading" [routerLink]="['/week/' + month + '/' + weeks[0][0]]">Week 1</th>
       <td *ngFor="let prevDay of prevMonthDays" class="cal-day-outside-month">{{prevDay}}</td>
-      <td *ngFor="let day of weeks[0]" [routerLink]="['/month/' + month + '/' + day]">{{day}}</td>
+      <td *ngFor="let day of weeks[0]" [routerLink]="['/month/' + month + '/' + day]"
+          [ngClass]="{'invert-colors':hasDetails(month, day)}"><span [ngClass]="{'white-text':hasDetails(month, day)}">{{day}}</span>
+      </td>
     </tr>
     <tr>
-      <th scope="row" class="cal-week-heading">Week 2</th>
-      <td *ngFor="let day of weeks[1]" [routerLink]="['/month/' + month + '/' + day]">{{day}}</td>
+      <th scope="row" class="cal-week-heading" [routerLink]="['/week/' + month + '/' + weeks[1][0]]">Week 2</th>
+      <td *ngFor="let day of weeks[1]" [routerLink]="['/month/' + month + '/' + day]"
+          [ngClass]="{'invert-colors':hasDetails(month, day)}"><span [ngClass]="{'white-text':hasDetails(month, day)}">{{day}}</span>
+      </td>
     </tr>
     <tr>
-      <th scope="row" class="cal-week-heading">Week 3</th>
-      <td *ngFor="let day of weeks[2]" [routerLink]="['/month/' + month + '/' + day]">{{day}}</td>
+      <th scope="row" class="cal-week-heading" [routerLink]="['/week/' + month + '/' + weeks[2][0]]">Week 3</th>
+      <td *ngFor="let day of weeks[2]" [routerLink]="['/month/' + month + '/' + day]"
+          [ngClass]="{'invert-colors':hasDetails(month, day)}"><span [ngClass]="{'white-text':hasDetails(month, day)}">{{day}}</span>
+      </td>
     </tr>
     <tr>
-      <th scope="row" class="cal-week-heading">Week 4</th>
-      <td *ngFor="let day of weeks[3]" [routerLink]="['/month/' + month + '/' + day]">{{day}}</td>
+      <th scope="row" class="cal-week-heading" [routerLink]="['/week/' + month + '/' + weeks[3][0]]">Week 4</th>
+      <td *ngFor="let day of weeks[3]" [routerLink]="['/month/' + month + '/' + day]"
+          [ngClass]="{'invert-colors':hasDetails(month, day)}"><span [ngClass]="{'white-text':hasDetails(month, day)}">{{day}}</span>
+      </td>
     </tr>
     <tr *ngIf="fifthWeekExists">
-      <th scope="row" class="cal-week-heading">Week 5</th>
-      <td *ngFor="let day of weeks[4]" [routerLink]="['/month/' + month + '/' + day]">{{day}}</td>
+      <th scope="row" class="cal-week-heading" [routerLink]="['/week/' + month + '/' + weeks[4][0]]">Week 5</th>
+      <td *ngFor="let day of weeks[4]" [routerLink]="['/month/' + month + '/' + day]"
+          [ngClass]="{'invert-colors':hasDetails(month, day)}"><span [ngClass]="{'white-text':hasDetails(month, day)}">{{day}}</span>
+      </td>
       <template [ngIf]="!sixthWeekExists">
         <td *ngFor="let nextDay of nextMonthDays" class="cal-day-outside-month">{{nextDay}}</td>
       </template>
     </tr>
     <tr *ngIf="sixthWeekExists">
-      <th scope="row" class="cal-week-heading">Week 6</th>
-      <td *ngFor="let day of weeks[5]">{{day}}</td>
+      <th scope="row" class="cal-week-heading" [routerLink]="['/week/' + month + '/' + weeks[5][0]]">Week 6</th>
+      <td *ngFor="let day of weeks[5]" [routerLink]="['/month/' + month + '/' + day]"
+          [ngClass]="{'invert-colors':hasDetails(month, day)}"><span [ngClass]="{'white-text':hasDetails(month, day)}">{{day}}</span>
+      </td>
       <td *ngFor="let nextDay of nextMonthDays" class="cal-day-outside-month">{{nextDay}}</td>
     </tr>
   </table>

@@ -9,12 +9,13 @@ import { CalendarYearViewComponent } from './components/calendar-year-view.compo
 import { CalendarDayViewComponent } from './components/calendar-day-view.component';
 import {CalendarComponent} from "./components/calendar.component";
 import {CalendarService} from "./components/calendar.service";
+import { CalendarWeekViewComponent } from './components/calendar-week-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalendarMonthViewComponent,
-    CalendarYearViewComponent, CalendarDayViewComponent, CalendarComponent,
+    CalendarYearViewComponent, CalendarDayViewComponent, CalendarComponent, CalendarWeekViewComponent,
   ],
   imports: [
     BrowserModule,

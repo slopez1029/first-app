@@ -104,6 +104,15 @@ a:active {
   color: #C7C8CA !important;
 }
 
+.invert-colors {
+  color: #ffffff;
+  background-color: #BE1E2D;
+}
+
+.white-text {
+  color: white;
+}
+
 .table.no-top-border tr td, .table.no-top-border tr th { /*https://codepen.io/netsi1964/pen/ogVQqG*/
   border-top-width: 0;
 }

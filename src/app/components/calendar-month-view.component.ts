@@ -1,6 +1,7 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
 import {Subscription} from "rxjs/Rx";
 import {Router, ActivatedRoute} from "@angular/router";
+import {CalendarService} from "./calendar.service";
 
 @Component({
   selector: 'app-calendar',
@@ -25,7 +26,9 @@ export class CalendarMonthViewComponent implements OnInit, OnDestroy {
 
   month:string = "";
 
-  constructor(private router:Router, private activatedRoute:ActivatedRoute) {
+  constructor(private router:Router,
+              private activatedRoute:ActivatedRoute,
+              private calendarService:CalendarService) {
     this.subscription = this.activatedRoute.params.subscribe(
       (param:any)=> {
         this.sixthWeekExists = false;
@@ -109,6 +112,7 @@ export class CalendarMonthViewComponent implements OnInit, OnDestroy {
       }
     );
 
+
   }
 
 
@@ -128,6 +132,10 @@ export class CalendarMonthViewComponent implements OnInit, OnDestroy {
 
   getThisDay(day: number) {
     return day+'';
+  }
+
+  hasDetails(month: string, day: string) {
+    return (this.calendarService.getDaysDetails(month, day).length > 0);
   }
 
   ngOnInit() {
