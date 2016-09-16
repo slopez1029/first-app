@@ -45,11 +45,12 @@
             <button
               type="submit"
               class="btn btn-danger"
-              >+
+            >+
             </button>
           </div>
         </div>
       </form>
+      <button class="btn btn-success" [ngClass]="{'disabled':isThisDayCurrent()}" (click)="makeTodayCurrent()">Mark this day as the current day</button>
     </div>
   </div>
 </div>

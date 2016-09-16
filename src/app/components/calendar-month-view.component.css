@@ -109,6 +109,10 @@ a:active {
   background-color: #BE1E2D;
 }
 
+.current-day {
+  background-color: #ffb8b8;
+}
+
 .white-text {
   color: white;
 }

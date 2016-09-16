@@ -5,12 +5,13 @@ export class CalendarService {
     "days": [[" This is the first event", "This is the second"], [], ["Go to the Beach!!", "Go to the Beach!!"], [], [], [], [], [], ["more events on this day.", "Better make it to this."], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], ["This is index 33"], [], [], [], [], [], [], ["Eat Chicken"], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], ["this is the last detail", "just kidding maybe this one", "okay okay it's this one"] ],
     "error": "NONE"
   };
-  
+
   private currentDayIndex:number;
 
 
 
   constructor() {
+    
   }
 
   dayHasDetails(month: string, day: string) {
@@ -115,12 +116,16 @@ export class CalendarService {
   getDaysDetails(month: string, day: string) {
     return this.calendarData.days[this.dayIndexCalc(month, day)];
   }
-  
+
   getDetails(index: string) {
     return this.calendarData.days[+index];
   }
-  
-  setCurrentDay(month:string, day:string) {
-    this.currentDayIndex = this.dayIndexCalc(month, day);
+
+  setCurrentDay(index:number) {
+    this.currentDayIndex = index;
+  }
+
+  isCurrentDay(index:number) {
+    return this.currentDayIndex === index;
   }
 }

@@ -137,6 +137,11 @@ export class CalendarMonthViewComponent implements OnInit, OnDestroy {
   hasDetails(month: string, day: string) {
     return (this.calendarService.getDaysDetails(month, day).length > 0);
   }
+  
+  isThisDayCurrent(month: string, day: string) {
+    let index = this.calendarService.dayIndexCalc(month, day);
+    return this.calendarService.isCurrentDay(index);
+  }
 
   ngOnInit() {
 
