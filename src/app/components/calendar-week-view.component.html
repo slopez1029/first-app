@@ -26,7 +26,8 @@
           </tr>
           <tr>
             <td *ngIf="atFirstMonth" class="inaccessible">{{startDate}}</td>
-            <td *ngFor="let date of weekArray" [ngClass]="{'invert-colors':hasDetails(date['index'])}" [routerLink]="['/month/' + month + '/' + date['date']]"><a><span
+            <td *ngFor="let date of weekArray" [ngClass]="{'invert-colors':hasDetails(date['index'])}"
+                [routerLink]="['/month/' + date['month'] + '/' + date['date']]"><a><span
               [ngClass]="{'white-text':hasDetails(date['index'])}">{{date["date"]}}</span></a>
             </td>
             <td *ngFor="let d of dummyWeek" class="inaccessible">{{d}}</td>
