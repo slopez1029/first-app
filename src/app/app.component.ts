@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {CalendarService} from "./components/calendar.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  private currentDateAndMonth = {};
+
+  constructor(private calendarService:CalendarService) {
+
+  }
+  
+  get currentDate() :any {
+    return this.calendarService.getMonthAndDate(this.calendarService.getCurrentDay());
+  }
+
 }

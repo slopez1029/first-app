@@ -3,4 +3,11 @@ h1 {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+#current-date-heading {
+  position:absolute;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  top: 0;
+  color: #BE1E2D;
+}
+
 

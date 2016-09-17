@@ -45,15 +45,23 @@ export class CalendarDayViewComponent implements OnInit, OnDestroy {
     this.calendarService.addDetail(month, day, detail);
     this.addForm.reset();
   }
-  
+
   isThisDayCurrent() {
     let index:number = this.calendarService.dayIndexCalc(this.currentMonth, this.currentDay);
     return this.calendarService.isCurrentDay(index);
   }
-  
+
   makeTodayCurrent() {
     let index:number = this.calendarService.dayIndexCalc(this.currentMonth, this.currentDay);
     this.calendarService.setCurrentDay(index);
+  }
+
+  thisMonthsYear() {
+    if(this.currentMonth === 'January' || this.currentMonth === 'February' ||this.currentMonth === 'March' || this.currentMonth === 'April' || this.currentMonth === 'May' ) {
+      return 2017;
+    } else {
+      return 2016;
+    }
   }
 
 }

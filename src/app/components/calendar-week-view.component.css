@@ -112,9 +112,8 @@ td:hover {
   color: white;
 }
 
-.current {
-  color: #BE1E2D;
-  text-decoration: underline;
+.current-day {
+  background-color: #ffb8b8;
 }
 
 .inaccessible {
