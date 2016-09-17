@@ -1,127 +1,25 @@
 @charset "utf-8";
 /* CSS Document */
 
-/*** TAGS ***/
-body {
-  font-size: 18pt;
-  color: #000;
-  background-color: #FFF;
-}
+/*** Tags ***/
 
-a {
-  color: #BE1E2D;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #DD263D;
-  text-decoration: underline;
-}
-
-a:active {
-  color: #FF2C46;
-  text-decoration: underline;
-}
-
-/*** IDS ***/
-#container {
-  margin: 0px auto;
-  padding: 0px;
-  width: 840px;
-}
-
-#content {
-  padding-top: 50px;
-  width: 840px;
-}
-
-#main-content {
-  width: 840px;
-  float: left;
-}
-
-#view-menu {
-  width: 840px;
-  height: 60px;
-}
-
-#selected-menu {
-  padding: 15px;
-  width: 810px;
-  height: 60px;
-}
-
-#calendar {
-  padding-top: 20px;
-  width: 840px;
-}
-
-#view-item {
-  width: 210px;
-  line-height: 60px;
-  text-align: center;
-  vertical-align: middle;
-  float: left;
-}
-
-#prev {
-  width: 75px;
-  line-height: 60px;
-  font-size: 18pt;
-  text-align: center;
-  vertical-align: middle;
-  float: left;
-}
-
-#selected {
-  width: 660px;
-  line-height: 60px;
-  font-size: 36pt;
-  text-align: center;
-  vertical-align: middle;
-  float: left;
-}
-
-#next {
-  width: 75px;
-  line-height: 60px;
-  font-size: 18pt;
-  text-align: center;
-  vertical-align: middle;
-  float:left;
-}
-
-/*** CLASSES ***/
-
-.current {
-  color: #BE1E2D;
-  text-decoration: underline;
-}
-
-.inaccessible {
-  color: #C7C8CA;
-}
-
-/* Clearfix solution from http://stackoverflow.com/questions/8554043/what-is-clearfix */
-.clearfix:after {
-  content: " "; /* Older browser do not support empty content */
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
-}
-
-@charset "utf-8";
-/* CSS Document */
-
-/*** TAGS ***/
 /* Table w/o 'outside border' modified from http://stackoverflow.com/questions/1257430/css-border-only-inside-the-table */
 table {
   border-collapse: collapse;
+  /*https://www.w3.org/Style/Examples/007/center.en.html*/
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+  border-top: 0px !important;
+  width: 75%;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 table td {
   border: 1px solid #C7C8CA;
+  font-size: 42pt;
   text-align: center;
   vertical-align: middle;
 }
@@ -142,42 +40,33 @@ table tr td:last-child {
   border-right: 0;
 }
 
-
-
-
-table { /*https://www.w3.org/Style/Examples/007/center.en.html*/
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  border-top: 0px !important;
-  font-family: Georgia, "Times New Roman", Times, serif;
+a {
+  color: #BE1E2D;
+  text-decoration: none;
 }
 
-@media screen and (min-width: 1000px) {
-  table td {
-    font-size: 42pt;
+a:hover {
+  color: #DD263D;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #FF2C46;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1000px) {
+  table {
+    width: 100%;
   }
-}
-
-@media screen and (min-width: 800px) and (max-width: 1000px) {
   table td {
     font-size: 36pt;
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 800px) {
-  table td {
-    font-size: 30pt;
-  }
-}
-
-@media screen and (min-width: 0px) and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   table td {
     font-size: 24pt;
   }
 }
-
-
 
