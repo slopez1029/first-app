@@ -63,7 +63,7 @@ export class CalendarWeekViewComponent implements OnInit, OnDestroy{
 
   weekBuilder(month:string, day:string) {
     let index:number = this.calendarService.dayIndexCalc(month, day);
-    console.log(index);
+    
     let startDateIndex:number;
 
     if (index >= 0 && index <= 5) {
