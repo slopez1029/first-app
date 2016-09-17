@@ -63,6 +63,7 @@ export class CalendarWeekViewComponent implements OnInit, OnDestroy{
 
   weekBuilder(month:string, day:string) {
     let index:number = this.calendarService.dayIndexCalc(month, day);
+    console.log(index);
     let startDateIndex:number;
 
     if (index >= 0 && index <= 5) {
@@ -72,7 +73,7 @@ export class CalendarWeekViewComponent implements OnInit, OnDestroy{
       this.startMonth = "Jul";
       this.endMonth = "Aug";
 
-      let weekIndex:number=index;
+      let weekIndex:number=0;
 
       for(let i=0; i<=5; i++) {
         this.weekArray[i] = this.calendarService.getMonthAndDate(weekIndex);
@@ -86,7 +87,7 @@ export class CalendarWeekViewComponent implements OnInit, OnDestroy{
       this.startMonth = "May";
       this.endMonth = "Jun";
 
-      let weekIndex:number=index;
+      let weekIndex:number=300;
 
       for(let i=0; i<=3; i++) {
         this.weekArray[i] = this.calendarService.getMonthAndDate(weekIndex);
