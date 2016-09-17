@@ -1,14 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-/*** TAGS ***/
-body {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 18pt;
-  color: #000;
-  background-color: #FFF;
-}
-
+/*** Tags ***/
 a {
   color: #BE1E2D;
   text-decoration: none;
@@ -24,75 +17,92 @@ a:active {
   text-decoration: underline;
 }
 
-/*** IDS ***/
+td a:hover, td a:active {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td {
+  width: 14.25%;
+  height: 100px;
+  font-family: "MS Serif", "New York", serif;
+  font-size: 24pt;
+  color: #C7C8CA;
+  text-align: center;
+  vertical-align: middle;
+}
+
+table th {
+  border-bottom: 1px solid black;
+  width: 14.25%;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+td:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+/*** IDs ***/
 #container {
   margin: 0px auto;
   padding: 0px;
-  width: 840px;
+  width: 50%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18pt;
+  color: #000;
+  background-color: #FFF;
 }
 
 #content {
-  padding-top: 50px;
-  width: 840px;
+  width: 100%;
 }
 
 #main-content {
-  width: 840px;
+  width: 100%;
   float: left;
 }
 
 #view-menu {
-  width: 840px;
+  width: 100%;
   height: 60px;
 }
 
 #selected-menu {
   padding: 15px;
-  width: 810px;
+  width: 100%;
   height: 60px;
 }
 
 #calendar {
-  padding-top: 20px;
-  width: 840px;
-}
-
-#view-item {
-  width: 210px;
-  line-height: 60px;
-  text-align: center;
-  vertical-align: middle;
-  float: left;
-}
-
-#prev {
-  width: 75px;
-  line-height: 60px;
-  font-size: 18pt;
-  text-align: center;
-  vertical-align: middle;
-  float: left;
+  padding-top: 40px;
+  width: 100%;
 }
 
 #selected {
-  width: 660px;
+  width: 100%;
   line-height: 60px;
-  font-size: 36pt;
+  font-size: 24pt;
   text-align: center;
   vertical-align: middle;
   float: left;
 }
 
-#next {
-  width: 75px;
+/*** Classes ***/
+.view-item {
+  width: 50%;
   line-height: 60px;
-  font-size: 18pt;
   text-align: center;
   vertical-align: middle;
-  float:left;
+  float: left;
 }
 
-/*** CLASSES ***/
 .invert-colors {
   color: #ffffff;
   background-color: #BE1E2D;
@@ -120,33 +130,19 @@ a:active {
   clear: both;
 }
 
-@charset "utf-8";
-/* CSS Document */
-
-/*** TAGS ***/
-table {
-  border-collapse: collapse;
+/*** Responsive @media queries ***/
+@media screen and (max-width: 1000px) {
+  #container {
+    width: 100%;
+  }
 }
 
-table th {
-  border-bottom: 1px solid black;
-  width: 120px;
-  height: 40px;
-  text-align: center;
-  vertical-align: middle;
-}
+@media screen and (max-width: 860px) {
+  table td {
+    font-size: 16pt;
+  }
 
-table td {
-  width: 120px;
-  height: 100px;
-  font-family: "MS Serif", "New York", serif;
-  font-size: 36pt;
-  color: #C7C8CA;
-  text-align: center;
-  vertical-align: middle;
-}
-
-/*** IDS ***/
-#calendar {
-  padding-top: 40px;
+  table th {
+    font-size: 10pt;
+  }
 }

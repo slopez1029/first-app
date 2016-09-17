@@ -3,17 +3,17 @@
     <div id="main-content" class="clearfix">
       <!-- Displays all possible views accessible from current view. -->
       <div id="view-menu" class="clearfix">
-        <div id="view-item"><a [routerLink]="['/year']">Year</a></div>
-        <div id="view-item"><a [routerLink]="['/month/' + month]">Month</a></div>
+        <div class="view-item"><a [routerLink]="['/year']">Year</a></div>
+        <div class="view-item"><a [routerLink]="['/month/' + month]">Month</a></div>
       </div>
-
+      
       <!-- Displays current selection (e.g. exact month, week, or date) and next/prev interface. -->
       <div id="selected-menu" class="clearfix">
         <div id="selected">Week of {{startMonth}}. {{startDate}} - {{endMonth}}. {{endDate}}</div>
       </div>
 
       <!-- Displays calendar info (table) for chosen selection. -->
-      <div id="container">
+      <div id="calendar">
         <table>
           <tr>
             <th>Su</th>
