@@ -3,14 +3,4 @@ h1 {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-@media screen and (max-width: 420px) {
-  .academic-heading {
-    display: none;
-  }
-}
 
-@media screen and (max-height: 600px) {
-  .academic-heading {
-    display: none;
-  }
-}

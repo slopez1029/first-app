@@ -149,7 +149,7 @@ a:active {
     font-size: 10pt;
   }
 
-  table tr:nth-child(2) th:first-child {
+  table tr:nth-child(3) th:first-child {
     display: none;
   }
 
@@ -163,8 +163,24 @@ a:active {
 }
 
 @media screen and (max-width: 460px) {
+  #left-icon {
+    margin-right: 20px;
+    text-align: right;
+  }
+
+  #right-icon {
+    margin-left: 20px;
+    text-align: left;
+  }
+
   #month-title-heading {
-    width: 100px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  table {
+    top: 125px;
   }
 }
 

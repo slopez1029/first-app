@@ -63,19 +63,15 @@ form {
 }
 
 #calendar {
-  padding-top: 20px;
+  padding-top: 40px;
   width: 100%;
   text-align: center;
-  vertical-align: middle;
 }
 
-#prev {
-  width: 75px;
-  line-height: 60px;
-  font-size: 18pt;
-  text-align: center;
-  vertical-align: middle;
-  float: left;
+#details-interface {
+  padding-left: 20px;
+  width: 100%;
+  text-align: left;
 }
 
 #selected {
@@ -87,15 +83,6 @@ form {
   float: left;
 }
 
-#next {
-  width: 75px;
-  line-height: 60px;
-  font-size: 18pt;
-  text-align: center;
-  vertical-align: middle;
-  float:left;
-}
-
 /*** Classes ***/
 .view-item {
   width: 33%;
@@ -103,6 +90,12 @@ form {
   text-align: center;
   vertical-align: middle;
   float: left;
+}
+
+.list-group-item {
+  padding-left: 40px;
+  text-align: left;
+  word-wrap: break-word;
 }
 
 .text-box {
@@ -116,11 +109,6 @@ form {
   padding: 15px;
   text-align: center;
   float: left;
-}
-
-.list-group-item {
-  padding-left: 40px;
-  text-align: left;
 }
 
 .kill {
@@ -154,5 +142,23 @@ form {
 @media screen and (max-width: 1000px) {
   #container {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .text-box {
+    width: 75%;
+    padding: 0 0 0 15px;
+  }
+  
+  .btn-box {
+    width: 25%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #calendar p {
+    padding-top: 50px;
   }
 }

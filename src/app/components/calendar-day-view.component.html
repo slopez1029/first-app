@@ -23,34 +23,36 @@
       </div>
 
       <!-- Displays calendar info (table) for chosen selection. -->
-      <div id="calendar">
+      <div id="calendar" class="clearfix">
         <p>Details for today</p>
-        <ul class="list-group">
-          <li class="list-group-item clearfix" *ngFor="let detail of dayDetails; let i = index">{{detail}}<span
-            class="glyphicon glyphicon-remove-circle kill" (click)="removeDetail(currentMonth, currentDay, i)"></span>
-          </li>
-        </ul>
-      </div>
-      <form [formGroup]="addForm" (ngSubmit)="onAddDetail(currentMonth, currentDay, inputDetail.value)">
-        <div class="form-group row">
-          <div class="text-box">
-            <input type="text"
-                   required
-                   class="form-control"
-                   formControlName="userDetail"
-                   #inputDetail
-            >
+        <div id="details-interface">
+          <ul class="list-group">
+            <li class="list-group-item clearfix" *ngFor="let detail of dayDetails; let i = index">{{detail}}<span
+              class="glyphicon glyphicon-remove-circle kill" (click)="removeDetail(currentMonth, currentDay, i)"></span>
+            </li>
+          </ul>
+          <form [formGroup]="addForm" (ngSubmit)="onAddDetail(currentMonth, currentDay, inputDetail.value)">
+          <div class="form-group row">
+            <div class="text-box">
+              <input type="text"
+                    required
+                    class="form-control"
+                    formControlName="userDetail"
+                    #inputDetail
+              >
+            </div>
+            <div class="btn-box">
+              <button
+                type="submit"
+                class="btn btn-danger"
+              >+
+              </button>
+            </div>
           </div>
-          <div class="btn-box">
-            <button
-              type="submit"
-              class="btn btn-danger"
-            >+
-            </button>
-          </div>
+        </form>
+        <button class="btn btn-success" [ngClass]="{'disabled':isThisDayCurrent()}" (click)="makeTodayCurrent()">Mark this day as the current day</button>
         </div>
-      </form>
-      <button class="btn btn-success" [ngClass]="{'disabled':isThisDayCurrent()}" (click)="makeTodayCurrent()">Mark this day as the current day</button>
+      </div>
     </div>
   </div>
 </div>
