@@ -1,20 +1,72 @@
 import {Injectable} from "@angular/core";
+import {Http, Response, Headers} from "@angular/http";
 
 @Injectable()
 export class CalendarService {
 
   private calendarData = {
-    "curDay": "12",
+    "curDay": "0",
     "days": [[" This is the first event", "This is the second"], [], ["Go to the Beach!!", "Go to the Beach!!"], [], [], [], [], [], ["more events on this day.", "Better make it to this."], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], ["This is index 33"], [], [], [], [], [], [], ["Eat Chicken"], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], ["this is the last detail", "just kidding maybe this one", "okay okay it's this one"]],
     "error": "NONE"
   };
 
   private currentDayIndex:number;
+  // private dateReqObject = {"name":"getDates"};
 
 
-  constructor() {
-    this.currentDayIndex = +this.calendarData['curDay'];
+  constructor(private http: Http) {
+    // this.getData();
   }
+
+  // getData() {
+  //   this.dataResource(this.dateReqObject)
+  //     .subscribe(
+  //       data => {
+  //         this.calendarData = data;
+  //         this.currentDayIndex=+this.calendarData['curDay'];
+  //       },
+  //       error => console.log(error)
+  //     );
+  // }
+  //
+  // deleteDetailFromServer(deleteReq) {
+  //   this.dataResource(deleteReq)
+  //     .subscribe(
+  //       data => console.log(data),
+  //       error => console.log(error)
+  //     );
+  // }
+  //
+  // addDetailOnServer(addReq) {
+  //   this.dataResource(addReq)
+  //     .subscribe(
+  //       data => console.log(data),
+  //       error => console.log(error)
+  //     );
+  // }
+  //
+  // setDayOnServer(setDayReq) {
+  //   this.dataResource(setDayReq)
+  //     .subscribe(
+  //       data => console.log(data),
+  //       error => console.log(error)
+  //     );
+  // }
+  //
+  // dataResource(user:any) {
+  //   const body = JSON.stringify(user);
+  //   const headers = new Headers();
+  //   headers.append('Content-Type', 'application/json');
+  //   return this.http.post('http://people.eecs.ku.edu/~jfustos/cgi-bin/Calendar.cgi', body, {
+  //     headers: headers
+  //   })
+  //     .map((data: Response) => data.json())
+  //     // .catch(this.handleError);
+  // }
+  //
+  // handleError() {
+  //   console.log("WTF?");
+  // }
 
   dayHasDetails(month:string, day:string) {
     if (this.calendarData.days[this.dayIndexCalc(month, day)]) {
@@ -105,12 +157,14 @@ export class CalendarService {
 
   deleteDetail(month:string, day:string, index) {
     let dayIndex:number = this.dayIndexCalc(month, day);
-    this.calendarData.days[dayIndex].splice(index, 1);
+    this.calendarData['days'][dayIndex].splice(index, 1);
+    // this.deleteDetailFromServer({"name":"removeDetail","day":""+dayIndex,"detailNum":""+index})
   }
 
-  addDetail(month:string, day:string, detail) {
+  addDetail(month:string, day:string, detail:string) {
     let dayIndex:number = this.dayIndexCalc(month, day);
     this.calendarData.days[dayIndex].push(detail);
+    // this.addDetailOnServer({"name":"addDetail","day":""+dayIndex,"detail":detail});
   }
 
 
@@ -124,6 +178,7 @@ export class CalendarService {
 
   setCurrentDay(index:number) {
     this.currentDayIndex = index;
+    // this.setDayOnServer({"name":"setCurDay","newDay":""+index});
   }
 
   isCurrentDay(index:number) {
