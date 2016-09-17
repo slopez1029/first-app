@@ -57,7 +57,7 @@ a:active {
 
 @media screen and (max-width: 1000px) {
   table {
-    top: 75px;
+    top: 125px;
     width: 100%;
   }
   table td {
@@ -74,9 +74,9 @@ a:active {
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 412px) {
   table {
-    top: 125px;
+    top: 175px;
   }
 }
 

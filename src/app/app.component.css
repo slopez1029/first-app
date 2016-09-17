@@ -4,9 +4,8 @@ h1 {
 }
 
 #current-date-heading {
-  position:absolute;
+  text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
-  top: 0;
   color: #BE1E2D;
 }
 
