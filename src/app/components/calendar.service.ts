@@ -65,7 +65,7 @@ export class CalendarService {
   // }
   //
   // handleError() {
-  //   console.log("WTF?");
+  //   console.log("There was an error");
   // }
 
   dayHasDetails(month:string, day:string) {
