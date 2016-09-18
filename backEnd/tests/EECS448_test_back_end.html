@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo"><h2>This Page is a test.</h2></div>
+
+<button type="button" onclick="talkDB(getData)"      >get DB</button>
+<button type="button" onclick="talkDB(setDay)"       >set Day</button>
+<button type="button" onclick="talkDB(setView)"      >set View</button>
+<button type="button" onclick="talkDB(addDetail)"    >add Detail</button>
+<button type="button" onclick="talkDB(removeDetail)" >remove Detail</button>
+<button type="button" onclick="talkDB(modifyDetail)" >modify Detail</button>
+
+<script>
+var myJson = "WHAT!!!";
+var getData 	  = JSON.stringify({"name":"getDates"});
+var setDay  	  = JSON.stringify({"name":"setCurDay","newDay":"15"});
+var setView  	  = JSON.stringify({"name":"setView","newView":"day"});
+var addDetail  	  = JSON.stringify({"name":"addDetail","day":"0","detail":"Do this first!!"});
+var removeDetail  = JSON.stringify({"name":"removeDetail","day":"0","detailNum":"0"});
+var modifyDetail  = JSON.stringify({"name":"modifyDetail","day":"0","detailNum":"2","detail":"This got modified!!"});
+
+function talkDB( myMessage ) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myJson = this.responseText;
+    }
+  };
+  xhttp.open("POST", "http://people.eecs.ku.edu/~jfustos/cgi-bin/Calendar.cgi", true);
+  xhttp.setRequestHeader("Content-type", "application/json");
+  xhttp.send( myMessage );
+}
+</script>
+
+</body>
+</html>
