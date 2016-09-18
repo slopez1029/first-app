@@ -1,0 +1,43 @@
+The 'doc/backEnd/' directory is a shadow directory for the main '/backEnd'
+directory. The files in it contain documentation on how to use the files
+in the main directory. This document gives a brief overview.
+
+backEnd/cgi-bin/Calendar.cgi
+	The main script.
+	Waits for an http PUT request that contains a JSON command and arguments.
+	Parses the command and calls the appropriate function with the arguments.
+	Does this to display and manipulate data from a database the represents a
+	year school calendar.
+	This script needs to go in the directory that will allow
+	URLs to make rest calls to it.
+	The line: use lib "/home/jfustos/EECS448/Calendar";
+		needs to be changed to point to the directory where everything else
+		will be installed.
+
+backEnd/modules
+	The modules that the main script calls into. Most of the heavy lifting
+	is done within these. Described in doc/backEnd/modules.
+
+backEnd/db.txt
+backEnd/db.txt.bak
+	Currently the database is implemented as a text file that has a JSON
+	structure held within it. This file will need to initially be copied
+	over so the base structure of the data is there.
+	The .bak version of the file is the same just with a known good version
+	of the data incase it gets corrupted.
+	The location of this file can be modified from: 
+		backEnd/modules/Conf.pm => $conf{'dbFile'}
+
+backEnd/log.txt
+	The log file for the backend. While some information is sent back over
+	the http response, more in-depth information is stored here.
+	This file does not need to be copied over, it will be created if it
+	is missing. This file is just here for reference.
+	Its location may be changed by editing:
+		backEnd/modules/Conf.pm => $conf{'logFile'}
+
+backEnd/tests/EECS448_test_back_end.html
+	This html file is used to test the rest services provided by Calendar.cgi.
+	You will need to copy it to a location where it can be accessed and
+	then change the internal url to point to Calendar.cgi.
+	The individual buttons test the individual commands provided.
