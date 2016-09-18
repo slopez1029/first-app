@@ -1,36 +1,22 @@
 <<<<<<< HEAD
-# FirstApp
+# EECS448_Calendar
+A web based calendar / planner for EECS448 group project 1.
+Team members: Haaris Chaudhry, Jacob Fustos, Nicholas Robless
+
+# Calendar Project
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.11-webpack.8.
 
 ## Development server
+Download the project, navigate to the directory containing the project in a command line and type `npm install` to install the required dependencies.
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
 
 ## Build
 
+If you want to place this project on a server, then you'll need to create a dist file using `ng build --prod`, remember to uncomment everything that was commented out in the calendar.service.ts file.
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+The dist file contains all that is necessary to get the project up and running
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). 
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Deploying to Github Pages
-
-Run `ng github-pages:deploy` to deploy to Github Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-=======
-# EECS448_Calendar
-A web based calendar / planner for EECS448 group project 1.
 >>>>>>> 71ad908f91d6a27f6ee0b949b1fc2209c73e15be
