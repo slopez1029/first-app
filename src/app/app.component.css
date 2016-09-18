@@ -3,10 +3,24 @@ h1 {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+a {
+  color: #BE1E2D;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #DD263D;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #FF2C46;
+  text-decoration: underline;
+}
+
 #current-date-heading {
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
-  color: #BE1E2D;
 }
 
 
