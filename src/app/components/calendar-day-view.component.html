@@ -19,7 +19,11 @@
 
       <!-- Displays current selection (e.g. exact month, week, or date) and next/prev interface. -->
       <div id="selected-menu" class="clearfix">
-        <div id="selected">{{currentMonth}} {{currentDay}}, {{thisMonthsYear()}}</div>
+        <div id="selected">
+          <a *ngIf="!atFirstDay" [routerLink]="getPreviousDay()"><span class="glyphicon glyphicon-chevron-left" id="left-icon"></span></a>
+          {{currentMonth}} {{currentDay}}, {{thisMonthsYear()}}
+        <a *ngIf="!atLastDay" [routerLink]="getNextDay()"><span class="glyphicon glyphicon-chevron-right" id="right-icon"></span></a>
+        </div>
       </div>
 
       <!-- Displays calendar info (table) for chosen selection. -->

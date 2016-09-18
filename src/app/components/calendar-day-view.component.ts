@@ -16,12 +16,26 @@ export class CalendarDayViewComponent implements OnInit, OnDestroy {
   private currentMonth:string;
   private currentDay:string;
   private dayDetails:string[];
+  private atFirstDay:boolean;
+  private atLastDay:boolean;
 
   constructor(private activatedRoute:ActivatedRoute, private calendarService:CalendarService) {
     this.subscription = this.activatedRoute.params.subscribe(
       (param:any)=> {
         this.currentDay = param['day'];
         this.currentMonth = param['month'];
+        if(this.calendarService.dayIndexCalc(this.currentMonth, this.currentDay) === 0) {
+          this.atFirstDay = true;
+        } else {
+          this.atFirstDay = false;
+        }
+
+        if(this.calendarService.dayIndexCalc(this.currentMonth, this.currentDay) === 303) {
+          this.atLastDay = true;
+        } else {
+          this.atLastDay = false;
+        }
+
         this.dayDetails = this.calendarService.getDaysDetails(param['month'], param['day']);
       }
     );
@@ -62,6 +76,20 @@ export class CalendarDayViewComponent implements OnInit, OnDestroy {
     } else {
       return 2016;
     }
+  }
+
+  getNextDay() {
+    let index = this.calendarService.dayIndexCalc(this.currentMonth, this.currentDay);
+    let dayObj = this.calendarService.getMonthAndDate(index+1);
+
+    return '/month/' + dayObj['month'] + '/' + dayObj['date'];
+  }
+
+  getPreviousDay() {
+    let index = this.calendarService.dayIndexCalc(this.currentMonth, this.currentDay);
+    let dayObj = this.calendarService.getMonthAndDate(index-1);
+
+    return '/month/' + dayObj['month'] + '/' + dayObj['date'];
   }
 
 }

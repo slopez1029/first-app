@@ -50,6 +50,16 @@ td:hover {
 }
 
 /*** IDs ***/
+#left-icon {
+  margin-right: 40px;
+  text-align: right;
+}
+
+#right-icon {
+  margin-left: 40px;
+  text-align: left;
+}
+
 #container {
   margin: 0px auto;
   padding: 0px;
@@ -95,6 +105,10 @@ td:hover {
 }
 
 /*** Classes ***/
+.dead-icon {
+  color: #C7C8CA !important;
+}
+
 .view-item {
   width: 50%;
   line-height: 60px;

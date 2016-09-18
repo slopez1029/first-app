@@ -9,7 +9,13 @@
 
       <!-- Displays current selection (e.g. exact month, week, or date) and next/prev interface. -->
       <div id="selected-menu" class="clearfix">
-        <div id="selected">Week of {{startMonth}}. {{startDate}} - {{endMonth}}. {{endDate}}</div>
+
+        <div id="selected">
+          <a *ngIf="!atFirstWeek" [routerLink]="getPreviousWeek()"><span  class="glyphicon glyphicon-chevron-left" id="left-icon"></span></a>
+            Week of {{startMonth}}. {{startDate}} - {{endMonth}}. {{endDate}}
+          <a *ngIf="!atLastWeek" [routerLink]="getNextWeek()"><span class="glyphicon glyphicon-chevron-right" id="right-icon"></span></a>
+        </div>
+
       </div>
 
       <!-- Displays calendar info (table) for chosen selection. -->
@@ -25,7 +31,7 @@
             <th>Sa</th>
           </tr>
           <tr>
-            <td *ngIf="atFirstMonth" class="inaccessible">{{startDate}}</td>
+            <td *ngIf="atFirstWeek" class="inaccessible">{{startDate}}</td>
             <td *ngFor="let date of weekArray" [ngClass]="{'invert-colors':hasDetails(date['index']), 'current-day':isThisDayCurrent(date['index'])}"
                 [routerLink]="['/month/' + date['month'] + '/' + date['date']]"><a><span
               [ngClass]="{'white-text':hasDetails(date['index'])}">{{date["date"]}}</span></a>

@@ -1,14 +1,14 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
 import {CalendarService} from "./calendar.service";
 import {Subscription} from "rxjs/Rx";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router, NavigationStart} from "@angular/router";
 
 @Component({
   selector: 'app-calendar-week-view',
   templateUrl: './calendar-week-view.component.html',
   styleUrls: ['./calendar-week-view.component.css']
 })
-export class CalendarWeekViewComponent implements OnInit, OnDestroy{
+export class CalendarWeekViewComponent implements OnInit, OnDestroy {
 
   private monthAbbreviations = {
     "January": "Jan",
@@ -25,75 +25,85 @@ export class CalendarWeekViewComponent implements OnInit, OnDestroy{
     "December": "Dec"
   };
 
-  private day:string;
-  private month:string;
+  private day: string;
+  private month: string;
 
-  private startDate:number;
-  private endDate:number;
-  private startMonth:string;
-  private endMonth:string;
-  private atFirstMonth:boolean;
-  private atLastMonth:boolean;
+  private startDate: number;
+  private endDate: number;
+  private startMonth: string;
+  private endMonth: string;
+  private atFirstWeek: boolean;
+  private atLastWeek: boolean;
 
-  private dummyWeek:number[] = [];
-  private weekArray:any[] = [];
+  private dummyWeek: number[] = [];
+  private weekArray: any[] = [];
 
-  private subscription:Subscription;
+  private subscription: Subscription;
 
 
-  constructor(private calendarService:CalendarService,
-              private activatedRoute:ActivatedRoute) {
+  constructor(private calendarService: CalendarService,
+              private activatedRoute: ActivatedRoute,
+              private router:Router) {
 
-    this.atFirstMonth = false;
-    this.atLastMonth = false;
+    this.atFirstWeek = false;
+    this.atLastWeek = false;
     this.dummyWeek = [];
 
     this.subscription = this.activatedRoute.params.subscribe(
-      (param:any)=> {
-        this.month=param['month'];
-        this.day=param['day'];
+      (param: any)=> {
+        this.month = param['month'];
+        this.day = param['day'];
 
         this.weekBuilder(this.month, this.day);
 
       });
+
+
   }
 
   ngOnInit() {
   }
 
-  weekBuilder(month:string, day:string) {
-    let index:number = this.calendarService.dayIndexCalc(month, day);
+  weekBuilder(month: string, day: string) {
+    let index: number = this.calendarService.dayIndexCalc(month, day);
 
-    let startDateIndex:number;
+    let startDateIndex: number;
 
     if (index >= 0 && index <= 5) {
-      this.atFirstMonth = true;
+      this.weekArray = [];
+      this.atFirstWeek = true;
       this.startDate = 31;
       this.endDate = 6;
       this.startMonth = "Jul";
       this.endMonth = "Aug";
 
-      let weekIndex:number=0;
+      let weekIndex: number = 0;
 
-      for(let i=0; i<=5; i++) {
+      for (let i = 0; i <= 5; i++) {
         this.weekArray[i] = this.calendarService.getMonthAndDate(weekIndex);
         weekIndex++;
       }
     } else if (index >= 300 && index <= 303) {
-      this.atLastMonth = true;
-      this.dummyWeek = [1,2,3];
+      this.weekArray = [];
+      this.atLastWeek = true;
+      this.dummyWeek = [1, 2, 3];
       this.startDate = 28;
       this.endDate = 3;
       this.startMonth = "May";
       this.endMonth = "Jun";
 
-      let weekIndex:number=300;
+      let weekIndex: number = 300;
 
-      for(let i=0; i<=3; i++) {
+      for (let i = 0; i <= 3; i++) {
         this.weekArray[i] = this.calendarService.getMonthAndDate(weekIndex);
         weekIndex++;
       }
     } else {
+      this.atLastWeek = false;
+      this.atFirstWeek = false;
+      this.dummyWeek = [];
+      this.weekArray = [];
+
       for (let i = index; i >= 0; i--) {
         if ((i + 1) % 7 === 0) {
           startDateIndex = i;
@@ -101,9 +111,9 @@ export class CalendarWeekViewComponent implements OnInit, OnDestroy{
         }
       }
 
-      let weekIndex:number=startDateIndex;
+      let weekIndex: number = startDateIndex;
 
-      for(let i=0; i<=6; i++) {
+      for (let i = 0; i <= 6; i++) {
         this.weekArray[i] = this.calendarService.getMonthAndDate(weekIndex);
         weekIndex++;
       }
@@ -115,7 +125,7 @@ export class CalendarWeekViewComponent implements OnInit, OnDestroy{
     }
   }
 
-  hasDetails(index:string) {
+  hasDetails(index: string) {
     return (this.calendarService.getDetails(index).length > 0);
   }
 
@@ -126,4 +136,25 @@ export class CalendarWeekViewComponent implements OnInit, OnDestroy{
   isThisDayCurrent(index: number) {
     return this.calendarService.isCurrentDay(index);
   }
+
+  getPreviousWeek() {
+    let index = this.calendarService.dayIndexCalc(this.month, this.day);
+    if (index <= 7) {
+      return '/week/August/1';
+    } else {
+      let dayObj = this.calendarService.getMonthAndDate(index-7);
+      return '/week/' + dayObj['month'] + '/' + dayObj['date'];
+    }
+  }
+
+  getNextWeek() {
+    let index = this.calendarService.dayIndexCalc(this.month, this.day);
+    if (index >= 297) {
+      return '/week/May/28';
+    } else {
+      let dayObj = this.calendarService.getMonthAndDate(index+7);
+      return '/week/' + dayObj['month'] + '/' + dayObj['date'];
+    }
+  }
+
 }
