@@ -1,0 +1,373 @@
+
+2016-09-18 03:40:49 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 03:40:49 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |getDates|.
+
+2016-09-18 03:42:10 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 03:42:10 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |setCurDay|.
+
+2016-09-18 03:42:10 :: /home/jfustos/EECS448/Calendar/DB.pl :: updated current day to 15.
+
+2016-09-18 03:42:13 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 03:42:13 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |setCurDay|.
+
+2016-09-18 03:42:13 :: /home/jfustos/EECS448/Calendar/DB.pl :: updated current day to 16.
+
+2016-09-18 03:42:17 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 03:42:17 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |setCurDay|.
+
+2016-09-18 03:42:17 :: /home/jfustos/EECS448/Calendar/DB.pl :: updated current day to 20.
+
+2016-09-18 03:42:20 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 03:42:20 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |setCurDay|.
+
+2016-09-18 03:42:20 :: /home/jfustos/EECS448/Calendar/DB.pl :: updated current day to 24.
+
+2016-09-18 03:42:29 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 03:42:29 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |addDetail|.
+
+2016-09-18 03:42:29 :: /home/jfustos/EECS448/Calendar/DB.pl :: successfully added detail |Good god making this thing was a nightmare.| to day |24|..
+
+2016-09-18 03:42:54 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 03:42:54 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |setCurDay|.
+
+2016-09-18 03:42:54 :: /home/jfustos/EECS448/Calendar/DB.pl :: updated current day to 111.
+
+2016-09-18 03:43:15 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 03:43:15 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |setCurDay|.
+
+2016-09-18 03:43:15 :: /home/jfustos/EECS448/Calendar/DB.pl :: updated current day to 106.
+
+2016-09-18 03:43:23 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 03:43:23 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |setCurDay|.
+
+2016-09-18 03:43:23 :: /home/jfustos/EECS448/Calendar/DB.pl :: updated current day to 105.
+
+2016-09-18 03:43:32 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 03:43:32 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |setCurDay|.
+
+2016-09-18 03:43:32 :: /home/jfustos/EECS448/Calendar/DB.pl :: updated current day to 103.
+
+2016-09-18 03:43:40 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 03:43:40 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |setCurDay|.
+
+2016-09-18 03:43:40 :: /home/jfustos/EECS448/Calendar/DB.pl :: updated current day to 98.
+
+2016-09-18 03:43:47 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 03:43:47 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |setCurDay|.
+
+2016-09-18 03:43:47 :: /home/jfustos/EECS448/Calendar/DB.pl :: updated current day to 86.
+
+2016-09-18 03:43:56 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 03:43:56 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |addDetail|.
+
+2016-09-18 03:43:56 :: /home/jfustos/EECS448/Calendar/DB.pl :: successfully added detail |Halloween!| to day |91|..
+
+2016-09-18 03:44:04 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 03:44:04 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |removeDetail|.
+
+2016-09-18 03:44:04 :: /home/jfustos/EECS448/Calendar/DB.pl :: successfully removed detail |Halloween!| from day |91| at index |0|..
+
+2016-09-18 03:45:41 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 03:45:41 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |getDates|.
+
+2016-09-18 03:46:21 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 03:46:21 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |getDates|.
+
+2016-09-18 03:48:04 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 03:48:04 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |getDates|.
+
+2016-09-18 04:14:37 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 04:14:37 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |getDates|.
+
+2016-09-18 04:14:47 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 04:14:47 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |setCurDay|.
+
+2016-09-18 04:14:47 :: /home/jfustos/EECS448/Calendar/DB.pl :: updated current day to 87.
+
+2016-09-18 04:14:55 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 04:14:55 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |getDates|.
+
+2016-09-18 04:25:25 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 04:25:25 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |setCurDay|.
+
+2016-09-18 04:25:25 :: /home/jfustos/EECS448/Calendar/DB.pl :: updated current day to 91.
+
+2016-09-18 04:25:36 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 04:25:36 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |addDetail|.
+
+2016-09-18 04:25:36 :: /home/jfustos/EECS448/Calendar/DB.pl :: successfully added detail |Halloween!| to day |91|..
+
+2016-09-18 04:25:43 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 04:25:43 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |setCurDay|.
+
+2016-09-18 04:25:43 :: /home/jfustos/EECS448/Calendar/DB.pl :: updated current day to 84.
+
+2016-09-18 04:39:50 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 04:39:50 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |getDates|.
+
+2016-09-18 04:41:15 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 04:41:15 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |setCurDay|.
+
+2016-09-18 04:41:15 :: /home/jfustos/EECS448/Calendar/DB.pl :: updated current day to 137.
+
+2016-09-18 04:53:08 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 04:53:08 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |getDates|.
+
+2016-09-18 04:54:00 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 04:54:00 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |addDetail|.
+
+2016-09-18 04:54:00 :: /home/jfustos/EECS448/Calendar/DB.pl :: successfully added detail |Sister's birthday| to day |88|..
+
+2016-09-18 04:54:09 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 04:54:09 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |setCurDay|.
+
+2016-09-18 04:54:09 :: /home/jfustos/EECS448/Calendar/DB.pl :: updated current day to 48.
+
+2016-09-18 09:30:16 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 09:30:16 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |getDates|.
+
+2016-09-18 09:30:23 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 09:30:23 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |getDates|.
+
+2016-09-18 09:56:47 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 09:56:47 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |addDetail|.
+
+2016-09-18 09:56:47 :: /home/jfustos/EECS448/Calendar/DB.pl :: successfully added detail |Do this first!!| to day |0|..
+
+2016-09-18 10:04:18 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 10:04:18 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |getDates|.
+
+2016-09-18 10:04:27 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 10:04:27 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |addDetail|.
+
+2016-09-18 10:04:27 :: /home/jfustos/EECS448/Calendar/DB.pl :: successfully added detail |Do this first!!| to day |0|..
+
+2016-09-18 10:04:31 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 10:04:31 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |getDates|.
+
+2016-09-18 10:04:40 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 10:04:40 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |addDetail|.
+
+2016-09-18 10:04:40 :: /home/jfustos/EECS448/Calendar/DB.pl :: successfully added detail |Do this first!!| to day |0|..
+
+2016-09-18 10:04:44 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 10:04:44 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |getDates|.
+
+2016-09-18 10:04:57 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 10:04:57 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |modifyDetail|.
+
+2016-09-18 10:04:57 :: /home/jfustos/EECS448/Calendar/DB.pl :: successfully modified detail to |This got modified!!| from day |0| at index |2|..
+
+2016-09-18 10:04:57 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 10:04:57 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |getDates|.
+
+2016-09-18 10:05:04 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 10:05:04 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |removeDetail|.
+
+2016-09-18 10:05:04 :: /home/jfustos/EECS448/Calendar/DB.pl :: successfully removed detail |Do this first!!| from day |0| at index |0|..
+
+2016-09-18 10:05:06 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 10:05:06 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |removeDetail|.
+
+2016-09-18 10:05:06 :: /home/jfustos/EECS448/Calendar/DB.pl :: successfully removed detail |Do this first!!| from day |0| at index |0|..
+
+2016-09-18 10:05:07 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 10:05:07 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |removeDetail|.
+
+2016-09-18 10:05:07 :: /home/jfustos/EECS448/Calendar/DB.pl :: successfully removed detail |This got modified!!| from day |0| at index |0|..
+
+2016-09-18 10:05:11 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 10:05:11 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |getDates|.
+
+2016-09-18 10:05:16 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 10:05:16 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |removeDetail|.
+
+2016-09-18 10:05:16 :: /home/jfustos/EECS448/Calendar/DB.pl :: ERROR :: detail_num needs to be a number between 0 and -1, was |0|..
+
+2016-09-18 10:05:21 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 10:05:21 :: /home/jfustos/EECS448/Calendar/DB.pl :: Valid request, was |modifyDetail|.
+
+2016-09-18 10:05:21 :: /home/jfustos/EECS448/Calendar/DB.pl :: ERROR :: detail_num needs to be a number between 0 and -1, was |2|..
+
+2016-09-18 10:23:34 :: /home/jfustos/EECS448/Calendar/DB.pl :: Starting..
+
+2016-09-18 10:23:34 :: /home/jfustos/EECS448/Calendar/DB.pl :: ERROR :: Problem decoding JSON string: |/home/jfustos/EECS448/Calendar/command.txt|. says:
+malformed JSON string, neither tag, array, object, number, string or atom, at character offset 0 (before "/home/jfustos/EECS44...") at /home/jfustos/EECS448/Calendar/modules/Command.pm line 53.
+.
+
+2016-09-18 13:55:36 :: Calendar.cgi :: Starting..
+
+2016-09-18 13:55:36 :: Calendar.cgi :: Valid request, was |getDates|.
+
+2016-09-18 14:02:25 :: Calendar.cgi :: Starting..
+
+2016-09-18 14:02:25 :: Calendar.cgi :: Valid request, was |getDates|.
+
+2016-09-18 14:02:37 :: Calendar.cgi :: Starting..
+
+2016-09-18 14:02:37 :: Calendar.cgi :: Valid request, was |setCurDay|.
+
+2016-09-18 14:02:37 :: Calendar.cgi :: updated current day to 99.
+
+2016-09-18 14:12:32 :: Calendar.cgi :: Starting..
+
+2016-09-18 14:12:32 :: Calendar.cgi :: Valid request, was |getDates|.
+
+2016-09-18 14:21:32 :: Calendar.cgi :: Starting..
+
+2016-09-18 14:21:32 :: Calendar.cgi :: Valid request, was |getDates|.
+
+2016-09-18 14:24:47 :: Calendar.cgi :: Starting..
+
+2016-09-18 14:24:47 :: Calendar.cgi :: Valid request, was |setCurDay|.
+
+2016-09-18 14:24:47 :: Calendar.cgi :: updated current day to 100.
+
+2016-09-18 15:31:03 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:31:03 :: Calendar.cgi :: ERROR :: Request must be POST.
+
+2016-09-18 15:31:47 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:31:47 :: Calendar.cgi :: Valid request, was |getDates|.
+
+2016-09-18 15:33:50 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:33:50 :: Calendar.cgi :: Valid request, was |getDates|.
+
+2016-09-18 15:34:00 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:34:00 :: Calendar.cgi :: Valid request, was |getDates|.
+
+2016-09-18 15:34:01 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:34:01 :: Calendar.cgi :: Valid request, was |getDates|.
+
+2016-09-18 15:34:33 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:34:33 :: Calendar.cgi :: Valid request, was |getDates|.
+
+2016-09-18 15:35:23 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:35:23 :: Calendar.cgi :: Valid request, was |setCurDay|.
+
+2016-09-18 15:35:23 :: Calendar.cgi :: updated current day to 25.
+
+2016-09-18 15:36:09 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:36:09 :: Calendar.cgi :: Valid request, was |addDetail|.
+
+2016-09-18 15:36:09 :: Calendar.cgi :: successfully added detail |Worst project ever.| to day |25|..
+
+2016-09-18 15:36:37 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:36:37 :: Calendar.cgi :: Valid request, was |getDates|.
+
+2016-09-18 15:36:54 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:36:54 :: Calendar.cgi :: Valid request, was |addDetail|.
+
+2016-09-18 15:36:54 :: Calendar.cgi :: successfully added detail |it was fun though| to day |25|..
+
+2016-09-18 15:36:58 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:36:58 :: Calendar.cgi :: Valid request, was |setCurDay|.
+
+2016-09-18 15:36:58 :: Calendar.cgi :: updated current day to 195.
+
+2016-09-18 15:37:15 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:37:15 :: Calendar.cgi :: Valid request, was |setCurDay|.
+
+2016-09-18 15:37:15 :: Calendar.cgi :: updated current day to 287.
+
+2016-09-18 15:37:17 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:37:17 :: Calendar.cgi :: Valid request, was |addDetail|.
+
+2016-09-18 15:37:17 :: Calendar.cgi :: successfully added detail |This day is May 15| to day |287|..
+
+2016-09-18 15:37:31 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:37:31 :: Calendar.cgi :: Valid request, was |setCurDay|.
+
+2016-09-18 15:37:31 :: Calendar.cgi :: updated current day to 101.
+
+2016-09-18 15:37:37 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:37:37 :: Calendar.cgi :: Valid request, was |getDates|.
+
+2016-09-18 15:37:37 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:37:37 :: Calendar.cgi :: Valid request, was |removeDetail|.
+
+2016-09-18 15:37:37 :: Calendar.cgi :: successfully removed detail |Worst project ever.| from day |25| at index |0|..
+
+2016-09-18 15:37:38 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:37:38 :: Calendar.cgi :: Valid request, was |removeDetail|.
+
+2016-09-18 15:37:38 :: Calendar.cgi :: successfully removed detail |it was fun though| from day |25| at index |0|..
+
+2016-09-18 15:39:17 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:39:17 :: Calendar.cgi :: Valid request, was |setCurDay|.
+
+2016-09-18 15:39:17 :: Calendar.cgi :: updated current day to 9.
+
+2016-09-18 15:39:24 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:39:24 :: Calendar.cgi :: Valid request, was |getDates|.
+
+2016-09-18 15:49:01 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:49:01 :: Calendar.cgi :: Valid request, was |getDates|.
+
+2016-09-18 15:49:27 :: Calendar.cgi :: Starting..
+
+2016-09-18 15:49:27 :: Calendar.cgi :: Valid request, was |getDates|.
+
