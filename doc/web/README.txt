@@ -7,10 +7,17 @@ mockups for early development:
 
 day.css
 day.html
+    Day view.
+
 month.css
 month.html
+    Month view.
+
 week.css
 week.html
+    Week view.
+
 year.css
 year.html
+    Year view.
 
