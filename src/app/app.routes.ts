@@ -8,8 +8,8 @@ const APP_ROUTES: RouterConfig = [
   {path: 'month', component: CalendarComponent, children: MONTH_ROUTES},
   {path: 'year', component: CalendarYearViewComponent },
   {path: 'week/:month/:day', component: CalendarWeekViewComponent },
-  {path: '', redirectTo: '/month/August', pathMatch: 'full'},
-  {path: '**', redirectTo: '/month/August', pathMatch: 'full'}, //ordering matters!
+  {path: '', redirectTo: '/year', pathMatch: 'full'},
+  {path: '**', redirectTo: '/year', pathMatch: 'full'}, //ordering matters!
 ];
 
 export const routing = RouterModule.forRoot(APP_ROUTES);
