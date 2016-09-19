@@ -34,6 +34,12 @@ http://getbootstrap.com/ <br />
 -Source for learning about certain bootstrap components <br />
 <br />
 
+https://typedoc.org <br />
+-Used to generate documentation
+
+http://stackoverflow.com/questions/35015994/typedoc-can-not-find-angular2-modules
+-Used to create the necessary gulp task to create documentation
+
 
 
 
