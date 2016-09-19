@@ -41,6 +41,12 @@ export class CalendarWeekViewComponent implements OnInit, OnDestroy {
   private subscription: Subscription;
 
 
+  /**
+   * Constructs the variables necessary for the week view
+   * @param calendarService
+   * @param activatedRoute
+   * @param router
+   */
   constructor(private calendarService: CalendarService,
               private activatedRoute: ActivatedRoute,
               private router:Router) {
@@ -64,6 +70,11 @@ export class CalendarWeekViewComponent implements OnInit, OnDestroy {
   ngOnInit() {
   }
 
+  /**
+   * Week builder is used in the constructor to create the current week as an array
+   * @param month
+   * @param day
+   */
   weekBuilder(month: string, day: string) {
     let index: number = this.calendarService.dayIndexCalc(month, day);
 
@@ -125,6 +136,11 @@ export class CalendarWeekViewComponent implements OnInit, OnDestroy {
     }
   }
 
+  /**
+   * Check to see if details exist on this day.
+   * @param index
+   * @returns {boolean}
+   */
   hasDetails(index: string) {
     return (this.calendarService.getDetails(index).length > 0);
   }
@@ -133,10 +149,19 @@ export class CalendarWeekViewComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
+  /**
+   * Check to see if this day is current
+   * @param index
+   * @returns {boolean}
+   */
   isThisDayCurrent(index: number) {
     return this.calendarService.isCurrentDay(index);
   }
 
+  /**
+   * Get the previous week
+   * @returns {any} A route that contains the information need to generate the previous week
+   */
   getPreviousWeek() {
     let index = this.calendarService.dayIndexCalc(this.month, this.day);
     if (index <= 7) {
@@ -147,6 +172,10 @@ export class CalendarWeekViewComponent implements OnInit, OnDestroy {
     }
   }
 
+  /**
+   * Get the next week
+   * @returns {any} * @returns {any} A route that contains the information need to generate the next week
+   */
   getNextWeek() {
     let index = this.calendarService.dayIndexCalc(this.month, this.day);
     if (index >= 297) {

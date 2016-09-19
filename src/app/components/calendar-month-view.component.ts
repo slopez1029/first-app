@@ -26,6 +26,12 @@ export class CalendarMonthViewComponent implements OnInit, OnDestroy {
 
   month:string = "";
 
+  /**
+   * This constructor sets monthly views based on the params in the activated route.
+   * @param router
+   * @param activatedRoute
+   * @param calendarService
+   */
   constructor(private router:Router,
               private activatedRoute:ActivatedRoute,
               private calendarService:CalendarService) {
@@ -116,28 +122,57 @@ export class CalendarMonthViewComponent implements OnInit, OnDestroy {
   }
 
 
+  /**
+   * gets the next month
+   * @returns {string}
+   */
   getNextMonth() {
     //this.router.navigate([this.monthArr[this.monthArr.indexOf(this.month) + 1]]);
     //console.log([this.monthArr[this.monthArr.indexOf(this.month) + 1]].toString());
     return [this.monthArr[this.monthArr.indexOf(this.month) + 1]].toString();
   }
 
+  /**
+   * gets the previous month
+   * @returns {string}
+   */
   getPreviousMonth() {
     return [this.monthArr[this.monthArr.indexOf(this.month) - 1]].toString();
   }
 
+  /**
+   * gets the current month
+   * @returns {string}
+   */
   getCurrentMonth() {
     return this.month;
   }
 
+  /**
+   * Gets this current day
+   * @param day
+   * @returns {string}
+   */
   getThisDay(day: number) {
     return day+'';
   }
 
+  /**
+   * Checks if the day has details on it
+   * @param month
+   * @param day
+   * @returns {boolean}
+   */
   hasDetails(month: string, day: string) {
     return (this.calendarService.getDaysDetails(month, day).length > 0);
   }
-  
+
+  /**
+   * Checks to see if this day is the current day set
+   * @param month
+   * @param day
+   * @returns {boolean}
+   */
   isThisDayCurrent(month: string, day: string) {
     let index = this.calendarService.dayIndexCalc(month, day);
     return this.calendarService.isCurrentDay(index);
