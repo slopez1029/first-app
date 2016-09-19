@@ -1,0 +1,89 @@
+This file contains descriptions of the top level modules.
+
+Command.pm
+	%requests => hash
+		A lookup table that relates a string to a function.
+		particularly this is used to call the function that was
+		desired by looking up the string that was passed in.
+	
+	getValid => function
+		args:
+			None
+		Returns a reference to the requests hash.
+	
+	set => function
+		Not used.
+	
+	get => function
+		args:
+			$encodedRequest  => string
+			$reporter        => reference to a reporter vector
+			$requests        => a reference to a hash.
+		Converts the string |$encodedRequest| that should have contained
+		an encoded JSON into a command object. It then confirms that the
+		'name' field within the command is valid in the |$requests| lookup
+		table. |$reporter| is used to log and reprot errors.
+
+
+Conf.pm
+	%conf => hash
+		Contains the key value pairs that hold the editable values for the
+		program. Edit these once you have copied over the modules.
+	
+	get => function
+		returns the |%conf| for use in the program.
+
+
+DataBase.pm
+	get => function
+		args:
+			$dbFile   => string containing file name of the database.
+			$reporter => function vector for logging and reporting.
+		Read in and decode the database contained in |$dbFile|. Currently
+		the database is just implemented as an encoded JSON structure.
+		returns:
+			a reference to the database structure.
+	
+	set => function
+		args:
+			$dbFile   => The file to store the database.
+			$reporter => The function vector for logging and reporting.
+			$db       => The database structure to store.
+		Convert to encoded JSON the database structure contained in |$db|.
+		Then store it in |$dbFile|.
+
+
+Report.pm
+	start => function
+		args:
+			$logFile => file name to log to.
+		Opens the log file |$logFile| for writing and returns a function
+		vector which should be used to log and croak errors.
+	
+	report => function
+		args:
+			$message => string to print.
+			$error   => if this message should be labeled as an error.
+			$myDie   => If this call kills the program after the reporting.
+		Both log and report over http the message |$message|. If |$error| is passed
+		in as 'ERROR' then it will get tagged as an error in the log file.
+		IF |$myDie| is passed in as 'DIE' then this function kills the program.
+	
+	send_err_json => function
+		args:
+			$message => The message to send.
+			$myDie   => should this kill the program?
+		Send out |$message| over http. If |$myDie| is 'DIE' kill the program.
+	
+	myLog => function
+		args:
+			$message => The message to log
+			$error   => If it should get marked as an error.
+		Logs to the open logfile. If |$error| is anything mark the log as an error.
+	
+	err_2_json => function
+		args:
+			$message => The message to send out over JSON.
+		Converts $message to the encoded JSON with the form
+			{ error => "$message" }
+		It then return the string.
