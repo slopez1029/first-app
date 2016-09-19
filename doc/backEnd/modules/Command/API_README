@@ -1,0 +1,82 @@
+Contains the API for the Commands submodules.
+
+AddDetail.pm
+	addDetail => function
+		args:
+			$args     => The arguments gotten from the command structure.
+			$db       => The database structure.
+			$reporter => A function vector for logging and reporting.
+		Corresponds to the http command structure
+			{"name":"addDetail","day":"num","detail":"string"}
+		Pushes |detail| onto the list of details for the day |day| in the 
+		database |$db|.
+		On success prints back to the http caller
+			{"error":"NONE"}
+
+
+GetDates.pm
+	getDates => function
+		args:
+			$args     => The arguments gotten from the command structure.
+			$db       => The database structure.
+			$reporter => A function vector for logging and reporting.
+		Corresponds to the http command structure
+			{"name":"getDates"}
+		Returns over http the database structure that can then be queried from
+		the javascript to see the current state and details of the calendar.
+
+
+Helper.pm
+	isIntegerWithinRange => function
+		args:
+			$test  => the number to test
+			$lower => the lower bound for the range.
+			$upper => the upper bound for the range.
+		A helper function that is utilized by many of the Commands.
+		Returns true if |$test| is numeric and within the given bounds.
+			false otherwise.
+
+
+ModifyDetail.pm
+	modifyDetail => function
+		args:
+			$args     => The arguments gotten from the command structure.
+			$db       => The database structure.
+			$reporter => A function vector for logging and reporting.
+		Corresponds to the http command structure
+			{"name":"modifyDetail","day":"num","detailNum":"num","detail":"string"}
+		Change the detail stored in the |$db| on day |day| index |detailNum| to 
+		string |detail|.
+
+
+RemoveDetail.pm
+	removeDetail => function
+		args:
+			$args     => The arguments gotten from the command structure.
+			$db       => The database structure.
+			$reporter => A function vector for logging and reporting.
+		Corresponds to the http command structure
+			{"name":"removeDetail","day":"num","detailNum":"num"}
+		Remove the detail stored in the |$db| on day |day| index |detailNum|.
+
+
+SetCurDay.pm
+	setCurDay => function
+		args:
+			$args     => The arguments gotten from the command structure.
+			$db       => The database structure.
+			$reporter => A function vector for logging and reporting.
+		Corresponds to the http command structure
+			{"name":"setCurDay","newDay":"num"}
+		Set the current day marked in the database |$db| to |newDay|.
+
+
+SetView.pm
+	setView => function
+		args:
+			$args     => The arguments gotten from the command structure.
+			$db       => The database structure.
+			$reporter => A function vector for logging and reporting.
+		Corresponds to the http command structure
+			{"name":"setView","newView":"enum"}
+		Set the current view stored in the database |$db| to |newView|.
