@@ -1,8 +1,11 @@
-<<<<<<< HEAD
 # EECS448_Calendar
 A web based calendar / planner for EECS448 group project 1.
+<br />
 Team members: Haaris Chaudhry, Jacob Fustos, Nicholas Robless
 
+
+## About
+This project uses the newly released Angular 2 framework to create a simple calendar application.  The application uses a PERL backend to save details for current certain days.
 
 ## Development server
 You'll first need to download NodeJs at NodeJs.org and then install the angular-cli using the command line and entering `npm install angular-cli`.
@@ -42,6 +45,3 @@ http://stackoverflow.com/questions/35015994/typedoc-can-not-find-angular2-module
 
 
 
-
-
->>>>>>> 71ad908f91d6a27f6ee0b949b1fc2209c73e15be
