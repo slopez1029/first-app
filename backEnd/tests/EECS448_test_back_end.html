@@ -27,7 +27,7 @@ function talkDB( myMessage ) {
       myJson = this.responseText;
     }
   };
-  xhttp.open("POST", "http://people.eecs.ku.edu/~jfustos/cgi-bin/Calendar.cgi", true);
+  xhttp.open("POST", "http://people.eecs.ku.edu/~slopez/cgi-bin/Calendar.cgi", true);
   xhttp.setRequestHeader("Content-type", "application/json");
   xhttp.send( myMessage );
 }

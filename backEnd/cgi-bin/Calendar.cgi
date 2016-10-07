@@ -3,13 +3,13 @@
 use strict;
 use warnings;
 
-use lib "/home/jfustos/perl5/share/perl5";
-use lib "/home/jfustos/perl5/lib64/perl5";
-use lib "/home/jfustos/perl5/lib/perl5";
+use lib "/home/slopez/perl5/share/perl5";
+use lib "/home/slopez/perl5/lib64/perl5";
+use lib "/home/slopez/perl5/lib/perl5";
 use CGI qw(:standard);
 use JSON;
 
-use lib "/home/jfustos/EECS448/Calendar";
+use lib "/home/slopez/Calendar";
 
 require "modules/Conf.pm";
 require "modules/Report.pm";

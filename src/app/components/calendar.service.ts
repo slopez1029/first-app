@@ -1,5 +1,6 @@
 import {Injectable} from "@angular/core";
 import {Http, Response, Headers} from "@angular/http";
+import 'rxjs/Rx';
 
 @Injectable()
 export class CalendarService {
@@ -73,7 +74,7 @@ export class CalendarService {
         error => console.log(error)
       );
   }
-
+ // C:\Users\slopez1029\Documents\first-app\first-app\src\app\components\calendar.service.ts
   /**
    * A method that directly accesses the server
    * @param user A request body that tells the server what needs to be done (add, set, delete)
@@ -83,7 +84,7 @@ export class CalendarService {
     const body = JSON.stringify(user);
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://people.eecs.ku.edu/~jfustos/cgi-bin/Calendar.cgi', body, {
+    return this.http.post('https://people.eecs.ku.edu/~slopez/cgi-bin/Calendar.cgi', body, {
       headers: headers
     })
       .map((data: Response) => data.json())
