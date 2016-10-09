@@ -220,10 +220,27 @@ export class CalendarService {
    * @param day
    * @param detail
    */
-  addDetail(month:string, day:string, detail:string) {
+  addDetail(month:string, day:string, detail:string, time:string) {
     let dayIndex:number = this.dayIndexCalc(month, day);
-    this.calendarData.days[dayIndex].push(detail);
-    this.addDetailOnServer({"name":"addDetail","day":""+dayIndex,"detail":detail});
+    //var index = this.dayIndexCalc(month, day);
+    var a = time.split(":");
+    var hour = a[0];
+    var numEvents = this.calendarData.days[dayIndex].length;
+
+    var event = this.calendarData.days[dayIndex].toString();
+    var eventHour = event.substring(0,2);
+
+    if(hour > eventHour)
+    {
+      this.calendarData.days[dayIndex].push(time + " " + detail);
+    }
+    else
+    {
+      this.calendarData.days[dayIndex].push("You tried to push a detail that is before the one already saved.")
+    }
+
+    //this.calendarData.days[dayIndex].push(b);
+    this.addDetailOnServer({"name":"addDetail","day":""+dayIndex,"detail":detail, "time": time});
   }
 
   /**

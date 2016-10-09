@@ -18,7 +18,7 @@
       </div>
 
       <!-- Displays current selection (e.g. exact month, week, or date) and next/prev interface. -->
-      <div id="selected-menu" class="clearfix">
+        <div id="selected-menu" class="clearfix">
         <div id="selected">
           <a *ngIf="!atFirstDay" [routerLink]="getPreviousDay()"><span class="glyphicon glyphicon-chevron-left"
                                                                        id="left-icon"></span></a>
@@ -34,12 +34,16 @@
         <div id="details-interface">
           <ul class="list-group">
             <li class="list-group-item clearfix" *ngFor="let detail of dayDetails; let i = index">{{detail}}<span
-              class="glyphicon glyphicon-remove-circle kill" (click)="removeDetail(currentMonth, currentDay, i)"></span>
+               class="glyphicon glyphicon-remove-circle kill" (click)="removeDetail(currentMonth, currentDay, i)"> </span>
             </li>
           </ul>
-          <form [formGroup]="addForm" (ngSubmit)="onAddDetail(currentMonth, currentDay, inputDetail.value)">
+          <form [formGroup]="addForm" (ngSubmit)="onAddDetail(currentMonth, currentDay, inputDetail.value, inputTime.value)">
             <div class="form-group row">
               <div class="text-box">
+                <input type="time"
+                       required
+                       #inputTime
+                >
                 <input type="text"
                        required
                        class="form-control"
@@ -47,6 +51,7 @@
                        #inputDetail
                 >
               </div>
+              <br>
               <div class="btn-box">
                 <button
                   type="submit"
