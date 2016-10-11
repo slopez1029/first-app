@@ -220,27 +220,43 @@ export class CalendarService {
    * @param day
    * @param detail
    */
-  addDetail(month:string, day:string, detail:string, time:string) {
+  addDetail(month:string, day:string, detail:string, time:string, timeEnd:string) {
     let dayIndex:number = this.dayIndexCalc(month, day);
     //var index = this.dayIndexCalc(month, day);
+    //this.calendarData['days'][dayIndex].splice(index, 1);
+
     var a = time.split(":");
-    var hour = a[0];
-    var numEvents = this.calendarData.days[dayIndex].length;
+    var hour = a[0]; //detail being added 's hour
 
-    var event = this.calendarData.days[dayIndex].toString();
-    var eventHour = event.substring(0,2);
+    var length = this.calendarData.days[dayIndex].length;
+    //var size = parseInt(length);
+    //for(var b = 0; b < length-1; b++)
+   // {
+      var event = this.calendarData.days[dayIndex].toString();
+      var eventHour = event.substring(0,2); //top event's hour
 
-    if(hour > eventHour)
-    {
-      this.calendarData.days[dayIndex].push(time + " " + detail);
-    }
-    else
-    {
-      this.calendarData.days[dayIndex].push("You tried to push a detail that is before the one already saved.")
-    }
-
-    //this.calendarData.days[dayIndex].push(b);
-    this.addDetailOnServer({"name":"addDetail","day":""+dayIndex,"detail":detail, "time": time});
+      /*if(hour > eventHour)
+      {
+        //this.calendarData.days[dayIndex].push(time + " " + detail);
+        this.calendarData.days[dayIndex].splice(length,0,time + " " + detail);
+      }*/
+      //if( event == '')
+      //{
+       // this.calendarData.days[dayIndex].push();
+      //}
+      //else if (hour < eventHour)
+      //{
+        //this.calendarData['days'][dayIndex].splice(0, 1);
+        //var index = a.toString();
+        //this.calendarData.days[dayIndex].splice(0, 2, time + " " + detail);
+        //this.calendarData.days[dayIndex].splice(a++, 0,)
+       // break;
+        // this.calendarData.days[dayIndex].push(hour);
+        //this.calendarData.days[dayIndex].push(eventHour);
+      //}
+    //}
+    this.calendarData.days[dayIndex].push(time + "-" + timeEnd + " " + detail);
+    this.addDetailOnServer({"name":"addDetail","day":""+dayIndex,"detail":detail, "time": time, "timeEnd": timeEnd});
   }
 
   /**

@@ -78,8 +78,8 @@ export class CalendarDayViewComponent implements OnInit, OnDestroy {
    * @param day
    * @param detail
    */
-  onAddDetail(month: string, day: string, detail: string, time: string) {
-    this.calendarService.addDetail(month, day, detail, time);
+  onAddDetail(month: string, day: string, detail: string, time: string, timeEnd: string) {
+    this.calendarService.addDetail(month, day, detail, time, timeEnd);
     this.addForm.reset();
   }
 
