@@ -112,11 +112,127 @@ export class CalendarService {
     }
   }
 
+
+  /**
+   * Converts month number to name for dayIndexCalc
+   * @param month
+   * @param day The date of the day
+   * @returns {string} month name
+   */
+  monthConverter(month:number){
+    if (month === 7){
+      return "August";
+    }
+    else if (month === 8){
+      return "September";
+    }
+    else if (month === 9){
+      return "October";
+    }
+    else if (month === 10){
+      return "November";
+    }
+    else if (month === 11){
+      return "December";
+    }
+    else if (month === 0){
+      return "January";
+    }
+    else if (month === 1){
+      return "February";
+    }
+    else if (month === 2){
+      return "March";
+    }
+    else if (month === 3){
+      return "April";
+    }
+    else if (month === 4){
+      return "May";
+    }
+}
+
+  /************************************************
+   * Converts month name to a number allowing incrementing
+   * @param month name
+   * @returns {number} month number based on calendar
+   */
+  reverseMonthConverter(month:string){
+    if (month === "August"){
+      return 1;
+    }
+    else if (month === "September"){
+      return 2;
+    }
+    else if (month === "October"){
+      return 3;
+    }
+    else if (month === "November"){
+      return 4;
+    }
+    else if (month === "December"){
+      return 5;
+    }
+    else if (month === "January"){
+      return 6;
+    }
+    else if (month === "February"){
+      return 7;
+    }
+    else if (month === "March"){
+      return 8;
+    }
+    else if (month === "April"){
+      return 9;
+    }
+    else if (month === "May"){
+      return 10;
+    }
+  }
+
+  /************************************************
+   * Converts month name to a number allowing incrementing
+   * @param month name
+   * @returns {number} month number based on calendar
+   */
+  reverseMonthReConverter(month:number){
+    if (month === 1){
+      return "August";
+    }
+    else if (month === 2){
+      return "September";
+    }
+    else if (month === 3){
+      return "October";
+    }
+    else if (month === 4){
+      return "November";
+    }
+    else if (month === 5){
+      return "December";
+    }
+    else if (month === 6){
+      return "January";
+    }
+    else if (month === 7){
+      return "February";
+    }
+    else if (month === 8){
+      return "March";
+    }
+    else if (month === 9){
+      return "April";
+    }
+    else if (month === 10){
+      return "May";
+    }
+  }
+
   /**
    * Calculates the index of the day
    * @param month the month that the day resides in
    * @param day The date of the day
-   * @returns {number} The indexd
+   * @returns {number} The index
    */
   dayIndexCalc(month:string, day:string) {
     if (month === "August") {
@@ -139,7 +255,10 @@ export class CalendarService {
       return +day + 242;
     } else if (month === "May") {
       return +day + 272;
+    } else {
+      return 404;
     }
+
   }
 
   /**
@@ -190,6 +309,7 @@ export class CalendarService {
     } else if (index >= 273 && index <= 303) {
       month = "May";
       date = index - 272;
+
     }
 
     let monthObj = {
@@ -220,43 +340,84 @@ export class CalendarService {
    * @param day
    * @param detail
    */
-  addDetail(month:string, day:string, detail:string, time:string, timeEnd:string) {
+  addDetail(month:string, day:string, detail:string) {
     let dayIndex:number = this.dayIndexCalc(month, day);
-    //var index = this.dayIndexCalc(month, day);
-    //this.calendarData['days'][dayIndex].splice(index, 1);
+    this.calendarData.days[dayIndex].push(detail);
+    this.addDetailOnServer({"name":"addDetail","day":""+dayIndex,"detail":detail});
+  }
 
-    var a = time.split(":");
-    var hour = a[0]; //detail being added 's hour
+  /**
+   * Adds a multi day detail both on the frontend and backend
+   * @param month
+   * @param start date
+   * @param end date
+   * @param detail
+   */
+  addMultiDetail(month:string, start:string, end:string, detail:string) {
+    let dayIndex:number = this.dayIndexCalc(month, start);
+    let endDate = new Date(end);
+    let endMonth:string = this.monthConverter(endDate.getMonth());
+    let endDay:string = (endDate.getDate()+1).toString();
+    let endIndex:number = this.dayIndexCalc(endMonth, endDay);
+    if(endIndex === 404){
+        alert("Please pick a valid date on this calendar \n(August 1, 2016 to May 31, 2017)");
+    } else if(dayIndex>endIndex){
+      alert("End date must be after current date");
+    } else {
+        while (dayIndex <= endIndex) {
+        this.calendarData.days[dayIndex].push(detail);
+        this.addDetailOnServer({"name": "addDetail", "day": "" + dayIndex, "detail": detail});
+        dayIndex++;
+       }
+    }
+  }
 
-    var length = this.calendarData.days[dayIndex].length;
-    //var size = parseInt(length);
-    //for(var b = 0; b < length-1; b++)
-   // {
-      var event = this.calendarData.days[dayIndex].toString();
-      var eventHour = event.substring(0,2); //top event's hour
 
-      /*if(hour > eventHour)
-      {
-        //this.calendarData.days[dayIndex].push(time + " " + detail);
-        this.calendarData.days[dayIndex].splice(length,0,time + " " + detail);
-      }*/
-      //if( event == '')
-      //{
-       // this.calendarData.days[dayIndex].push();
-      //}
-      //else if (hour < eventHour)
-      //{
-        //this.calendarData['days'][dayIndex].splice(0, 1);
-        //var index = a.toString();
-        //this.calendarData.days[dayIndex].splice(0, 2, time + " " + detail);
-        //this.calendarData.days[dayIndex].splice(a++, 0,)
-       // break;
-        // this.calendarData.days[dayIndex].push(hour);
-        //this.calendarData.days[dayIndex].push(eventHour);
-      //}
-    //}
-    this.calendarData.days[dayIndex].push(time + "-" + timeEnd + " " + detail);
-    this.addDetailOnServer({"name":"addDetail","day":""+dayIndex,"detail":detail, "time": time, "timeEnd": timeEnd});
+  /*******************************************
+   * Adds a detail both on the frontend and backend
+   * @param month
+   * @param day
+   * @param detail
+   */
+  addRepeatingMonthDetail(month:string, day:string, detail:string) {
+    let reMonth:number = this.reverseMonthConverter(month);//a number, month
+    while(reMonth <=10){
+      let reMonthName = this.reverseMonthReConverter(reMonth);//back to month name
+      let dayIndex:number = this.dayIndexCalc(reMonthName, day);//dayindex
+      this.calendarData.days[dayIndex].push(detail);
+      this.addDetailOnServer({"name":"addDetail","day":""+dayIndex,"detail":detail});
+      reMonth++;
+    }
+  }
+
+  /*******************************************
+   * Adds a detail both on the frontend and backend
+   * @param month
+   * @param day
+   * @param detail
+   */
+  addRepeatingWeekDetail(month:string, day:string, detail:string) {
+    let dayIndex:number = this.dayIndexCalc(month, day);
+    while(dayIndex <=303){
+      this.calendarData.days[dayIndex].push(detail);
+      this.addDetailOnServer({"name":"addDetail","day":""+dayIndex,"detail":detail});
+      dayIndex = dayIndex+7;
+    }
+  }
+
+  /*******************************************
+   * Adds a detail both on the frontend and backend
+   * @param month
+   * @param day
+   * @param detail
+   */
+  addRepeatingBiWeekDetail(month:string, day:string, detail:string) {
+    let dayIndex:number = this.dayIndexCalc(month, day);
+    while(dayIndex <=303){
+      this.calendarData.days[dayIndex].push(detail);
+      this.addDetailOnServer({"name":"addDetail","day":""+dayIndex,"detail":detail});
+      dayIndex = dayIndex+14;
+    }
   }
 
   /**

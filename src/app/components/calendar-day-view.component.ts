@@ -3,6 +3,7 @@ import {Subscription} from "rxjs/Rx";
 import {ActivatedRoute} from "@angular/router";
 import {CalendarService} from "./calendar.service";
 import {FormGroup, FormControl, Validators} from "@angular/forms";
+import {Http, Response, RequestOptions, Headers} from '@angular/http';
 
 @Component({
   selector: 'app-calendar-day-view',
@@ -78,8 +79,53 @@ export class CalendarDayViewComponent implements OnInit, OnDestroy {
    * @param day
    * @param detail
    */
-  onAddDetail(month: string, day: string, detail: string, time: string, timeEnd: string) {
-    this.calendarService.addDetail(month, day, detail, time, timeEnd);
+  onAddDetail(month: string, day: string, detail: string) {
+    this.calendarService.addDetail(month, day, detail);
+    this.addForm.reset();
+  }
+
+  /**
+   * Makes a call to the service telling it where a multi day detail should be added
+   * @param month
+   * @param start date
+   * @param end date
+   * @param detail
+   */
+  onAddMultiDetail(month: string, start: string, end:string, detail: string) {
+    this.calendarService.addMultiDetail(month, start, end, detail);
+    this.addForm.reset();
+  }
+  /**
+   * Makes a call to the service telling it where a multi day detail should be added
+   * @param month
+   * @param start date
+   * @param end date
+   * @param detail
+   */
+  onAddRepDetail1(month: string, day:string, detail: string) {
+    this.calendarService.addRepeatingMonthDetail(month, day, detail);
+    this.addForm.reset();
+  }
+  /**
+   * Makes a call to the service telling it where a multi day detail should be added
+   * @param month
+   * @param start date
+   * @param end date
+   * @param detail
+   */
+  onAddRepDetail2(month: string, day:string, detail: string) {
+    this.calendarService.addRepeatingBiWeekDetail(month, day, detail);
+    this.addForm.reset();
+  }
+  /**
+   * Makes a call to the service telling it where a multi day detail should be added
+   * @param month
+   * @param start date
+   * @param end date
+   * @param detail
+   */
+  onAddRepDetail3(month: string, day:string, detail: string) {
+    this.calendarService.addRepeatingWeekDetail(month, day, detail);
     this.addForm.reset();
   }
 
