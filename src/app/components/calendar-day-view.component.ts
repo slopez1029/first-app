@@ -3,7 +3,6 @@ import {Subscription} from "rxjs/Rx";
 import {ActivatedRoute} from "@angular/router";
 import {CalendarService} from "./calendar.service";
 import {FormGroup, FormControl, Validators} from "@angular/forms";
-import {Http, Response, RequestOptions, Headers} from '@angular/http';
 
 @Component({
   selector: 'app-calendar-day-view',
@@ -79,8 +78,8 @@ export class CalendarDayViewComponent implements OnInit, OnDestroy {
    * @param day
    * @param detail
    */
-  onAddDetail(month: string, day: string, detail: string) {
-    this.calendarService.addDetail(month, day, detail);
+  onAddTodayDetail(month: string, day: string, detail: string) {
+    this.calendarService.addTodayDetail(month, day, detail);
     this.addForm.reset();
   }
 
@@ -96,10 +95,9 @@ export class CalendarDayViewComponent implements OnInit, OnDestroy {
     this.addForm.reset();
   }
   /**
-   * Makes a call to the service telling it where a multi day detail should be added
+   * Makes a call to the service telling it where a weekly detail should be added
    * @param month
-   * @param start date
-   * @param end date
+   * @param day
    * @param detail
    */
   onAddRepDetail1(month: string, day:string, detail: string) {
@@ -107,7 +105,7 @@ export class CalendarDayViewComponent implements OnInit, OnDestroy {
     this.addForm.reset();
   }
   /**
-   * Makes a call to the service telling it where a multi day detail should be added
+   * Makes a call to the service telling it where a biweekly detail should be added
    * @param month
    * @param start date
    * @param end date
@@ -118,7 +116,7 @@ export class CalendarDayViewComponent implements OnInit, OnDestroy {
     this.addForm.reset();
   }
   /**
-   * Makes a call to the service telling it where a multi day detail should be added
+   * Makes a call to the service telling it where a monthly detail should be added
    * @param month
    * @param start date
    * @param end date

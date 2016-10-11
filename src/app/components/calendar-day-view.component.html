@@ -37,7 +37,7 @@
               class="glyphicon glyphicon-remove-circle kill" (click)="removeDetail(currentMonth, currentDay, i)"></span>
             </li>
           </ul>
-          <form [formGroup]="addForm" (ngSubmit)="onAddDetail(currentMonth, currentDay, inputDetail.value)">
+          <form [formGroup]="addForm" (ngSubmit)="onAddTodayDetail(currentMonth, currentDay, inputDetail.value)">
             <div class="form-group row">
               <div class="text-box">
                 <input type="text"

@@ -336,18 +336,27 @@ export class CalendarService {
 
   /**
    * Adds a detail both on the frontend and backend
+   * @param index
+   * @param detail
+   */
+  addDetail(index:number, detail:string) {
+    this.calendarData.days[index].push(detail);
+    this.addDetailOnServer({"name":"addDetail","day":""+index,"detail":detail});
+  }
+
+  /**
+   * Adds a today detail
    * @param month
    * @param day
    * @param detail
    */
-  addDetail(month:string, day:string, detail:string) {
+  addTodayDetail(month:string, day:string, detail:string) {
     let dayIndex:number = this.dayIndexCalc(month, day);
-    this.calendarData.days[dayIndex].push(detail);
-    this.addDetailOnServer({"name":"addDetail","day":""+dayIndex,"detail":detail});
+    this.addDetail(dayIndex, detail);
   }
 
   /**
-   * Adds a multi day detail both on the frontend and backend
+   * Adds a multi day detail
    * @param month
    * @param start date
    * @param end date
@@ -365,8 +374,7 @@ export class CalendarService {
       alert("End date must be after current date");
     } else {
         while (dayIndex <= endIndex) {
-        this.calendarData.days[dayIndex].push(detail);
-        this.addDetailOnServer({"name": "addDetail", "day": "" + dayIndex, "detail": detail});
+        this.addDetail(dayIndex, detail);
         dayIndex++;
        }
     }
@@ -374,7 +382,7 @@ export class CalendarService {
 
 
   /*******************************************
-   * Adds a detail both on the frontend and backend
+   * Adds a monthly detail
    * @param month
    * @param day
    * @param detail
@@ -384,14 +392,13 @@ export class CalendarService {
     while(reMonth <=10){
       let reMonthName = this.reverseMonthReConverter(reMonth);//back to month name
       let dayIndex:number = this.dayIndexCalc(reMonthName, day);//dayindex
-      this.calendarData.days[dayIndex].push(detail);
-      this.addDetailOnServer({"name":"addDetail","day":""+dayIndex,"detail":detail});
+      this.addDetail(dayIndex, detail);
       reMonth++;
     }
   }
 
   /*******************************************
-   * Adds a detail both on the frontend and backend
+   * Adds a weekly detail
    * @param month
    * @param day
    * @param detail
@@ -399,14 +406,13 @@ export class CalendarService {
   addRepeatingWeekDetail(month:string, day:string, detail:string) {
     let dayIndex:number = this.dayIndexCalc(month, day);
     while(dayIndex <=303){
-      this.calendarData.days[dayIndex].push(detail);
-      this.addDetailOnServer({"name":"addDetail","day":""+dayIndex,"detail":detail});
+      this.addDetail(dayIndex, detail);
       dayIndex = dayIndex+7;
     }
   }
 
   /*******************************************
-   * Adds a detail both on the frontend and backend
+   * Adds a biweek detail
    * @param month
    * @param day
    * @param detail
@@ -414,8 +420,7 @@ export class CalendarService {
   addRepeatingBiWeekDetail(month:string, day:string, detail:string) {
     let dayIndex:number = this.dayIndexCalc(month, day);
     while(dayIndex <=303){
-      this.calendarData.days[dayIndex].push(detail);
-      this.addDetailOnServer({"name":"addDetail","day":""+dayIndex,"detail":detail});
+      this.addDetail(dayIndex, detail);
       dayIndex = dayIndex+14;
     }
   }
