@@ -74,7 +74,6 @@ export class CalendarService {
         error => console.log(error)
       );
   }
- // C:\Users\slopez1029\Documents\first-app\first-app\src\app\components\calendar.service.ts
   /**
    * A method that directly accesses the server
    * @param user A request body that tells the server what needs to be done (add, set, delete)

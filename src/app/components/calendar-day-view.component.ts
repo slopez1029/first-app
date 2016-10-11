@@ -107,8 +107,7 @@ export class CalendarDayViewComponent implements OnInit, OnDestroy {
   /**
    * Makes a call to the service telling it where a biweekly detail should be added
    * @param month
-   * @param start date
-   * @param end date
+   * @param day
    * @param detail
    */
   onAddRepDetail2(month: string, day:string, detail: string) {
@@ -118,8 +117,7 @@ export class CalendarDayViewComponent implements OnInit, OnDestroy {
   /**
    * Makes a call to the service telling it where a monthly detail should be added
    * @param month
-   * @param start date
-   * @param end date
+   * @param day
    * @param detail
    */
   onAddRepDetail3(month: string, day:string, detail: string) {
