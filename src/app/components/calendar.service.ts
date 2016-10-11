@@ -230,6 +230,7 @@ export class CalendarService {
 
     var length = this.calendarData.days[dayIndex].length;
     //var size = parseInt(length);
+    //commit
     //for(var b = 0; b < length-1; b++)
    // {
       var event = this.calendarData.days[dayIndex].toString();
