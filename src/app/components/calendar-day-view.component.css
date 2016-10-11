@@ -35,6 +35,9 @@ form {
   padding: 0;
 }
 
+label {
+  font-size: 14pt;
+}
 /*** IDs ***/
 #container {
   margin: 0px auto;

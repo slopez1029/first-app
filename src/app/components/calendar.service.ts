@@ -376,7 +376,7 @@ export class CalendarService {
     if(endIndex === 404){
         alert("Please pick a valid date on this calendar \n(August 1, 2016 to May 31, 2017)");
     } else if(dayIndex>endIndex){
-      alert("End date must be after current date");
+       alert("End date must be after current date");
     } else {
         while (dayIndex <= endIndex) {
         this.addDetail(dayIndex, detail, time, timeEnd);

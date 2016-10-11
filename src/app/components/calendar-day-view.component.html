@@ -40,20 +40,23 @@
           <form [formGroup]="addForm" (ngSubmit)="onAddTodayDetail(currentMonth, currentDay, inputDetail.value, inputTime.value, inputTime2.value)">
             <div class="form-group row">
               <div class="text-box">
-                <input type="time"
-                       required
-                       #inputTime
-                >
-                <input type="time"
-                       required
-                       #inputTime2
-                >
                 <input type="text"
                        required
                        class="form-control"
                        formControlName="userDetail"
                        #inputDetail
                 >
+                <p style="font-size:80%">Start Time:
+                <input type="time"
+                       required
+                       #inputTime
+                >
+                End Time:
+                <input type="time"
+                       required
+                       #inputTime2
+                >
+                </p>
               </div>
               <div class="btn-box">
                 <button
@@ -64,7 +67,100 @@
               </div>
             </div>
           </form>
-          <p align="center">Add multiday event</p>
+          <br><p align="center">Add weekly event</p>
+          <form [formGroup]="addForm" (ngSubmit)="onAddRepDetail3(currentMonth, currentDay, inputDetailR.value, inputTimeR.value, inputTime2R.value)">
+            <div class="form-group row">
+              <div class="text-box">
+                <input type="text"
+                       required
+                       class="form-control"
+                       formControlName="userDetail"
+                       #inputDetailR
+                >
+                <p style="font-size:80%">Start Time:
+                <input type="time"
+                        required
+                        #inputTimeR
+                >
+                End Time:
+                <input type="time"
+                       required
+                       #inputTime2R
+                >
+                </p>
+              </div>
+              <div class="btn-box">
+                <button
+                  type="submit"
+                  class="btn btn-danger"
+                >+
+                </button>
+              </div>
+            </div>
+          </form>
+          <br><p align="center">Add biweekly event</p>
+          <form [formGroup]="addForm" (ngSubmit)="onAddRepDetail2(currentMonth, currentDay, inputDetailX.value, inputTimeX.value, inputTime2X.value)">
+            <div class="form-group row">
+              <div class="text-box">
+                <input type="text"
+                       required
+                       class="form-control"
+                       formControlName="userDetail"
+                       #inputDetailX
+                >
+                <p style="font-size:80%">Start Time:
+                <input type="time"
+                       required
+                       #inputTimeX
+                >
+                End Time:
+                <input type="time"
+                       required
+                       #inputTime2X
+                >
+                </p>
+              </div>
+              <div class="btn-box">
+                <button
+                  type="submit"
+                  class="btn btn-danger"
+                >+
+                </button>
+              </div>
+            </div>
+          </form>
+          <br><p align="center">Add monthly event</p>
+          <form [formGroup]="addForm" (ngSubmit)="onAddRepDetail1(currentMonth, currentDay, inputDetailB.value, inputTimeB.value, inputTime2B.value)">
+            <div class="form-group row">
+              <div class="text-box">
+                <input type="text"
+                       required
+                       class="form-control"
+                       formControlName="userDetail"
+                       #inputDetailB
+                >
+                <p style="font-size:80%">Start Time:
+                <input type="time"
+                       required
+                       #inputTimeB
+                >
+                End Time:
+                <input type="time"
+                       required
+                       #inputTime2B
+                >
+                </p>
+              </div>
+              <div class="btn-box">
+                <button
+                  type="submit"
+                  class="btn btn-danger"
+                >+
+                </button>
+              </div>
+            </div>
+          </form>
+          <br><p align="center">Add multiday event</p>
           <p align="center" style="font-size:80%">End date:
             <input style="display:inline-block"
                    type="date"
@@ -79,90 +175,6 @@
                        class="form-control"
                        formControlName="userDetail"
                        #inputDetailM
-                >
-              </div>
-              <div class="btn-box">
-                <button
-                  type="submit"
-                  class="btn btn-danger"
-                >+
-                </button>
-              </div>
-            </div>
-          </form>
-          <p align="center">Add weekly event</p>
-          <form [formGroup]="addForm" (ngSubmit)="onAddRepDetail3(currentMonth, currentDay, inputDetailR.value, inputTimeR.value, inputTime2R.value)">
-            <div class="form-group row">
-              <div class="text-box">
-                <input type="time"
-                       required
-                       #inputTimeR
-                >
-                <input type="time"
-                       required
-                       #inputTime2R
-                >
-                <input type="text"
-                       required
-                       class="form-control"
-                       formControlName="userDetail"
-                       #inputDetailR
-                >
-              </div>
-              <div class="btn-box">
-                <button
-                  type="submit"
-                  class="btn btn-danger"
-                >+
-                </button>
-              </div>
-            </div>
-          </form>
-          <p align="center">Add biweekly event</p>
-          <form [formGroup]="addForm" (ngSubmit)="onAddRepDetail2(currentMonth, currentDay, inputDetailX.value, inputTimeX.value, inputTime2X.value)">
-            <div class="form-group row">
-              <div class="text-box">
-                <input type="time"
-                       required
-                       #inputTimeX
-                >
-                <input type="time"
-                       required
-                       #inputTime2X
-                >
-                <input type="text"
-                       required
-                       class="form-control"
-                       formControlName="userDetail"
-                       #inputDetailX
-                >
-              </div>
-              <div class="btn-box">
-                <button
-                  type="submit"
-                  class="btn btn-danger"
-                >+
-                </button>
-              </div>
-            </div>
-          </form>
-          <p align="center">Add monthly event</p>
-          <form [formGroup]="addForm" (ngSubmit)="onAddRepDetail1(currentMonth, currentDay, inputDetailB.value, inputTimeB.value, inputTime2B.value)">
-            <div class="form-group row">
-              <div class="text-box">
-                <input type="time"
-                       required
-                       #inputTimeB
-                >
-                <input type="time"
-                       required
-                       #inputTime2B
-                >
-                <input type="text"
-                       required
-                       class="form-control"
-                       formControlName="userDetail"
-                       #inputDetailB
                 >
               </div>
               <div class="btn-box">
