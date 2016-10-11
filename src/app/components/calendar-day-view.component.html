@@ -37,9 +37,17 @@
               class="glyphicon glyphicon-remove-circle kill" (click)="removeDetail(currentMonth, currentDay, i)"></span>
             </li>
           </ul>
-          <form [formGroup]="addForm" (ngSubmit)="onAddTodayDetail(currentMonth, currentDay, inputDetail.value)">
+          <form [formGroup]="addForm" (ngSubmit)="onAddTodayDetail(currentMonth, currentDay, inputDetail.value, inputTime.value, inputTime2.value)">
             <div class="form-group row">
               <div class="text-box">
+                <input type="time"
+                       required
+                       #inputTime
+                >
+                <input type="time"
+                       required
+                       #inputTime2
+                >
                 <input type="text"
                        required
                        class="form-control"
@@ -83,9 +91,17 @@
             </div>
           </form>
           <p align="center">Add weekly event</p>
-          <form [formGroup]="addForm" (ngSubmit)="onAddRepDetail3(currentMonth, currentDay, inputDetailR.value)">
+          <form [formGroup]="addForm" (ngSubmit)="onAddRepDetail3(currentMonth, currentDay, inputDetailR.value, inputTimeR.value, inputTime2R.value)">
             <div class="form-group row">
               <div class="text-box">
+                <input type="time"
+                       required
+                       #inputTimeR
+                >
+                <input type="time"
+                       required
+                       #inputTime2R
+                >
                 <input type="text"
                        required
                        class="form-control"
@@ -103,9 +119,17 @@
             </div>
           </form>
           <p align="center">Add biweekly event</p>
-          <form [formGroup]="addForm" (ngSubmit)="onAddRepDetail2(currentMonth, currentDay, inputDetailX.value)">
+          <form [formGroup]="addForm" (ngSubmit)="onAddRepDetail2(currentMonth, currentDay, inputDetailX.value, inputTimeX.value, inputTime2X.value)">
             <div class="form-group row">
               <div class="text-box">
+                <input type="time"
+                       required
+                       #inputTimeX
+                >
+                <input type="time"
+                       required
+                       #inputTime2X
+                >
                 <input type="text"
                        required
                        class="form-control"
@@ -123,9 +147,17 @@
             </div>
           </form>
           <p align="center">Add monthly event</p>
-          <form [formGroup]="addForm" (ngSubmit)="onAddRepDetail1(currentMonth, currentDay, inputDetailB.value)">
+          <form [formGroup]="addForm" (ngSubmit)="onAddRepDetail1(currentMonth, currentDay, inputDetailB.value, inputTimeB.value, inputTime2B.value)">
             <div class="form-group row">
               <div class="text-box">
+                <input type="time"
+                       required
+                       #inputTimeB
+                >
+                <input type="time"
+                       required
+                       #inputTime2B
+                >
                 <input type="text"
                        required
                        class="form-control"
@@ -144,7 +176,7 @@
           </form>
             <button class="btn btn-danger" [ngClass]="{'disabled':isThisDayCurrent()}" (click)="makeTodayCurrent()">Mark
               this day as the current day
-            </button>
+            </button><br><br>
         </div>
       </div>
     </div>

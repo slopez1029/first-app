@@ -77,9 +77,11 @@ export class CalendarDayViewComponent implements OnInit, OnDestroy {
    * @param month
    * @param day
    * @param detail
+   * @param time
+   * @param timeEnd
    */
-  onAddTodayDetail(month: string, day: string, detail: string) {
-    this.calendarService.addTodayDetail(month, day, detail);
+  onAddTodayDetail(month: string, day: string, detail: string, time:string, timeEnd:string) {
+    this.calendarService.addTodayDetail(month, day, detail, time, timeEnd);
     this.addForm.reset();
   }
 
@@ -89,6 +91,8 @@ export class CalendarDayViewComponent implements OnInit, OnDestroy {
    * @param start date
    * @param end date
    * @param detail
+   * @param time
+   * @param timeEnd
    */
   onAddMultiDetail(month: string, start: string, end:string, detail: string) {
     this.calendarService.addMultiDetail(month, start, end, detail);
@@ -99,9 +103,11 @@ export class CalendarDayViewComponent implements OnInit, OnDestroy {
    * @param month
    * @param day
    * @param detail
+   * @param time
+   * @param timeEnd
    */
-  onAddRepDetail1(month: string, day:string, detail: string) {
-    this.calendarService.addRepeatingMonthDetail(month, day, detail);
+  onAddRepDetail1(month: string, day:string, detail: string, time:string, timeEnd:string) {
+    this.calendarService.addRepeatingMonthDetail(month, day, detail, time, timeEnd);
     this.addForm.reset();
   }
   /**
@@ -109,9 +115,11 @@ export class CalendarDayViewComponent implements OnInit, OnDestroy {
    * @param month
    * @param day
    * @param detail
+   * @param time
+   * @param timeEnd
    */
-  onAddRepDetail2(month: string, day:string, detail: string) {
-    this.calendarService.addRepeatingBiWeekDetail(month, day, detail);
+  onAddRepDetail2(month: string, day:string, detail: string, time:string, timeEnd:string) {
+    this.calendarService.addRepeatingBiWeekDetail(month, day, detail, time, timeEnd);
     this.addForm.reset();
   }
   /**
@@ -119,9 +127,11 @@ export class CalendarDayViewComponent implements OnInit, OnDestroy {
    * @param month
    * @param day
    * @param detail
+   * @param time
+   * @param timeEnd
    */
-  onAddRepDetail3(month: string, day:string, detail: string) {
-    this.calendarService.addRepeatingWeekDetail(month, day, detail);
+  onAddRepDetail3(month: string, day:string, detail: string, time:string, timeEnd:string) {
+    this.calendarService.addRepeatingWeekDetail(month, day, detail, time, timeEnd);
     this.addForm.reset();
   }
 
