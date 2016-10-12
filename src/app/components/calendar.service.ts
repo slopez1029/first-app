@@ -341,8 +341,9 @@ export class CalendarService {
    * @param timeEnd
    */
   addDetail(index:number, detail:string, time:string, timeEnd:string) {
-    this.calendarData.days[index].push(time + "-" + timeEnd + " " + detail);
-    this.addDetailOnServer({"name":"addDetail","day":""+index,"detail":detail,"time":time,"timeEnd":timeEnd});
+      this.calendarData.days[index].push(time + "-" + timeEnd + " " + detail);
+      this.addDetailOnServer({"name":"addDetail","day":""+index,"detail":detail,"time":time,"timeEnd":timeEnd});
+
   }
 
   /**
